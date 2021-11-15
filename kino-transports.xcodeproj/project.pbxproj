@@ -14,6 +14,11 @@
 		841CE9572742340F003EEF0F /* kino_transportsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CE9562742340F003EEF0F /* kino_transportsTests.swift */; };
 		841CE9612742340F003EEF0F /* kino_transportsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CE9602742340F003EEF0F /* kino_transportsUITests.swift */; };
 		841CE9632742340F003EEF0F /* kino_transportsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CE9622742340F003EEF0F /* kino_transportsUITestsLaunchTests.swift */; };
+		84845ACD2743019F00345E5D /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84845AC82743019F00345E5D /* Poppins-Light.ttf */; };
+		84845ACE2743019F00345E5D /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84845AC92743019F00345E5D /* Poppins-Medium.ttf */; };
+		84845ACF2743019F00345E5D /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84845ACA2743019F00345E5D /* Poppins-Regular.ttf */; };
+		84845AD02743019F00345E5D /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84845ACB2743019F00345E5D /* Poppins-Bold.ttf */; };
+		84845AD12743019F00345E5D /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84845ACC2743019F00345E5D /* Poppins-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,12 @@
 		841CE95C2742340F003EEF0F /* kino-transportsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kino-transportsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		841CE9602742340F003EEF0F /* kino_transportsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kino_transportsUITests.swift; sourceTree = "<group>"; };
 		841CE9622742340F003EEF0F /* kino_transportsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kino_transportsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		84845AC62742FFA800345E5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		84845AC82743019F00345E5D /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		84845AC92743019F00345E5D /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		84845ACA2743019F00345E5D /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		84845ACB2743019F00345E5D /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		84845ACC2743019F00345E5D /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +105,11 @@
 		841CE9442742340C003EEF0F /* kino-transports */ = {
 			isa = PBXGroup;
 			children = (
+				84845AC62742FFA800345E5D /* Info.plist */,
 				841CE9452742340C003EEF0F /* kino_transportsApp.swift */,
 				841CE9472742340C003EEF0F /* ContentView.swift */,
 				841CE9492742340E003EEF0F /* Assets.xcassets */,
+				84845AC72743019F00345E5D /* Poppins */,
 				841CE94B2742340E003EEF0F /* Preview Content */,
 			);
 			path = "kino-transports";
@@ -125,6 +138,18 @@
 				841CE9622742340F003EEF0F /* kino_transportsUITestsLaunchTests.swift */,
 			);
 			path = "kino-transportsUITests";
+			sourceTree = "<group>";
+		};
+		84845AC72743019F00345E5D /* Poppins */ = {
+			isa = PBXGroup;
+			children = (
+				84845AC82743019F00345E5D /* Poppins-Light.ttf */,
+				84845AC92743019F00345E5D /* Poppins-Medium.ttf */,
+				84845ACA2743019F00345E5D /* Poppins-Regular.ttf */,
+				84845ACB2743019F00345E5D /* Poppins-Bold.ttf */,
+				84845ACC2743019F00345E5D /* Poppins-SemiBold.ttf */,
+			);
+			path = Poppins;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +257,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				841CE94D2742340E003EEF0F /* Preview Assets.xcassets in Resources */,
+				84845AD12743019F00345E5D /* Poppins-SemiBold.ttf in Resources */,
+				84845AD02743019F00345E5D /* Poppins-Bold.ttf in Resources */,
+				84845ACE2743019F00345E5D /* Poppins-Medium.ttf in Resources */,
+				84845ACD2743019F00345E5D /* Poppins-Light.ttf in Resources */,
 				841CE94A2742340E003EEF0F /* Assets.xcassets in Resources */,
+				84845ACF2743019F00345E5D /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,11 +452,13 @@
 				DEVELOPMENT_TEAM = PQB4W7P768;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "kino-transports/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,11 +483,13 @@
 				DEVELOPMENT_TEAM = PQB4W7P768;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "kino-transports/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
