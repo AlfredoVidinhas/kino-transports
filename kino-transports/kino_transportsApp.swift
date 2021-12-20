@@ -11,7 +11,7 @@ import SwiftUI
 struct kino_transportsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashView()
         }
     }
 }
