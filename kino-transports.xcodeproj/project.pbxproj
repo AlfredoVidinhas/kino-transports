@@ -19,6 +19,12 @@
 		84845ACF2743019F00345E5D /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84845ACA2743019F00345E5D /* Poppins-Regular.ttf */; };
 		84845AD02743019F00345E5D /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84845ACB2743019F00345E5D /* Poppins-Bold.ttf */; };
 		84845AD12743019F00345E5D /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84845ACC2743019F00345E5D /* Poppins-SemiBold.ttf */; };
+		AAE1E2A82770BC540008021F /* EmailPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E2A72770BC540008021F /* EmailPhoneView.swift */; };
+		AAE1E2AA2770BD140008021F /* NumberPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E2A92770BD140008021F /* NumberPhoneView.swift */; };
+		AAE1E2AD2770BD930008021F /* ExDividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E2AC2770BD930008021F /* ExDividerView.swift */; };
+		AAE1E2AF2770BE260008021F /* ConfirmCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E2AE2770BE250008021F /* ConfirmCodeView.swift */; };
+		AAE1E2B22770C31D0008021F /* OTPTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E2B12770C31D0008021F /* OTPTextFieldView.swift */; };
+		AAE1E3102771E4F70008021F /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = AAE1E30F2771E4F70008021F /* SwiftUIX */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,11 @@
 		84845ACA2743019F00345E5D /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		84845ACB2743019F00345E5D /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		84845ACC2743019F00345E5D /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		AAE1E2A72770BC540008021F /* EmailPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPhoneView.swift; sourceTree = "<group>"; };
+		AAE1E2A92770BD140008021F /* NumberPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPhoneView.swift; sourceTree = "<group>"; };
+		AAE1E2AC2770BD930008021F /* ExDividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExDividerView.swift; sourceTree = "<group>"; };
+		AAE1E2AE2770BE250008021F /* ConfirmCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmCodeView.swift; sourceTree = "<group>"; };
+		AAE1E2B12770C31D0008021F /* OTPTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAE1E3102771E4F70008021F /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,9 +117,13 @@
 		841CE9442742340C003EEF0F /* kino-transports */ = {
 			isa = PBXGroup;
 			children = (
+				AAE1E2AB2770BD710008021F /* Controls */,
 				84845AC62742FFA800345E5D /* Info.plist */,
 				841CE9452742340C003EEF0F /* kino_transportsApp.swift */,
 				841CE9472742340C003EEF0F /* SplashView.swift */,
+				AAE1E2A72770BC540008021F /* EmailPhoneView.swift */,
+				AAE1E2A92770BD140008021F /* NumberPhoneView.swift */,
+				AAE1E2AE2770BE250008021F /* ConfirmCodeView.swift */,
 				841CE9492742340E003EEF0F /* Assets.xcassets */,
 				84845AC72743019F00345E5D /* Poppins */,
 				841CE94B2742340E003EEF0F /* Preview Content */,
@@ -152,6 +168,23 @@
 			path = Poppins;
 			sourceTree = "<group>";
 		};
+		AAE1E2AB2770BD710008021F /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				AAE1E2B02770C2F10008021F /* PinField */,
+				AAE1E2AC2770BD930008021F /* ExDividerView.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		AAE1E2B02770C2F10008021F /* PinField */ = {
+			isa = PBXGroup;
+			children = (
+				AAE1E2B12770C31D0008021F /* OTPTextFieldView.swift */,
+			);
+			path = PinField;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,6 +201,9 @@
 			dependencies = (
 			);
 			name = "kino-transports";
+			packageProductDependencies = (
+				AAE1E30F2771E4F70008021F /* SwiftUIX */,
+			);
 			productName = "kino-transports";
 			productReference = 841CE9422742340C003EEF0F /* kino-transports.app */;
 			productType = "com.apple.product-type.application";
@@ -240,6 +276,9 @@
 				Base,
 			);
 			mainGroup = 841CE9392742340C003EEF0F;
+			packageReferences = (
+				AAE1E30E2771E4F70008021F /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+			);
 			productRefGroup = 841CE9432742340C003EEF0F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -288,6 +327,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				841CE9482742340C003EEF0F /* SplashView.swift in Sources */,
+				AAE1E2AD2770BD930008021F /* ExDividerView.swift in Sources */,
+				AAE1E2AF2770BE260008021F /* ConfirmCodeView.swift in Sources */,
+				AAE1E2A82770BC540008021F /* EmailPhoneView.swift in Sources */,
+				AAE1E2AA2770BD140008021F /* NumberPhoneView.swift in Sources */,
+				AAE1E2B22770C31D0008021F /* OTPTextFieldView.swift in Sources */,
 				841CE9462742340C003EEF0F /* kino_transportsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -639,6 +683,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AAE1E30E2771E4F70008021F /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AAE1E30F2771E4F70008021F /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAE1E30E2771E4F70008021F /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 841CE93A2742340C003EEF0F /* Project object */;
 }
