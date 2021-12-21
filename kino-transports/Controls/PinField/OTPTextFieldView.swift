@@ -33,7 +33,7 @@ public struct OTPTextFieldView: View {
                 ZStack {
                     
                     RoundedRectangle(cornerRadius: 5)
-                        .foregroundColor(.white)
+                        .foregroundColor(.clear)
                     .padding()
                         .background(RoundedRectangle(cornerRadius: 5)            .stroke(Color(.lightGray), lineWidth: 0.5))
                         .frame(width: 60, height: 60)
@@ -129,5 +129,6 @@ extension Int {
 struct PasscodeField_Previews: PreviewProvider {
     static var previews: some View {
         OTPTextFieldView { otp, completionHandler in }
+        
     }
 }

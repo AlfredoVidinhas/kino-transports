@@ -19,7 +19,7 @@ struct ButtonView: View {
             .cornerRadius(16)
             .padding(.horizontal, 20)
             .padding(.bottom, 20)
-            .shadow(color: Color("Shadow"), radius: 30, x: 0, y: 15)
+            .shadow(color: Color("Shadow"), radius: 18, x: 0, y: 15)
     }
 }
 
