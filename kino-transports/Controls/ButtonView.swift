@@ -15,7 +15,7 @@ struct ButtonView: View {
             .frame(maxWidth: .infinity, maxHeight: 56)
             .foregroundColor(Color.white)
             .font(Font.custom("Poppins-Medium", size: 18))
-            .background(Color.accentColor)
+            .background(LinearGradient(gradient: Gradient(colors: [Color("SecondColor"), .accentColor]), startPoint: .trailing, endPoint: .leading))
             .cornerRadius(16)
             .padding(.horizontal, 20)
             .padding(.bottom, 20)
