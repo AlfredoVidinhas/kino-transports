@@ -50,14 +50,7 @@ struct EmailPhoneView: View {
                     impactMed.impactOccurred()
                 }, label: {
                     NavigationLink(destination: ConfirmCodeView(), label: {
-                        Text("Continuar")
-                            .frame(maxWidth: .infinity, maxHeight: 56)
-                            .foregroundColor(Color.white)
-                            .font(Font.custom("Poppins-Medium", size: 18))
-                            .background(Color.accentColor)
-                            .cornerRadius(16)
-                            .padding(.horizontal, 20)
-                            .padding(.bottom, 20)
+                        ButtonView(text: "Continuar")
                     })
                 })
                 

@@ -25,6 +25,8 @@
 		AAE1E2AF2770BE260008021F /* ConfirmCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E2AE2770BE250008021F /* ConfirmCodeView.swift */; };
 		AAE1E2B22770C31D0008021F /* OTPTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E2B12770C31D0008021F /* OTPTextFieldView.swift */; };
 		AAE1E3102771E4F70008021F /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = AAE1E30F2771E4F70008021F /* SwiftUIX */; };
+		AAE1E313277214690008021F /* NameRegistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E312277214690008021F /* NameRegistView.swift */; };
+		AAE1E3152772187A0008021F /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E3142772187A0008021F /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		AAE1E2AC2770BD930008021F /* ExDividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExDividerView.swift; sourceTree = "<group>"; };
 		AAE1E2AE2770BE250008021F /* ConfirmCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmCodeView.swift; sourceTree = "<group>"; };
 		AAE1E2B12770C31D0008021F /* OTPTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextFieldView.swift; sourceTree = "<group>"; };
+		AAE1E312277214690008021F /* NameRegistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameRegistView.swift; sourceTree = "<group>"; };
+		AAE1E3142772187A0008021F /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,12 +122,9 @@
 			isa = PBXGroup;
 			children = (
 				AAE1E2AB2770BD710008021F /* Controls */,
+				AAE1E3112772141A0008021F /* Views */,
 				84845AC62742FFA800345E5D /* Info.plist */,
 				841CE9452742340C003EEF0F /* kino_transportsApp.swift */,
-				841CE9472742340C003EEF0F /* SplashView.swift */,
-				AAE1E2A72770BC540008021F /* EmailPhoneView.swift */,
-				AAE1E2A92770BD140008021F /* NumberPhoneView.swift */,
-				AAE1E2AE2770BE250008021F /* ConfirmCodeView.swift */,
 				841CE9492742340E003EEF0F /* Assets.xcassets */,
 				84845AC72743019F00345E5D /* Poppins */,
 				841CE94B2742340E003EEF0F /* Preview Content */,
@@ -173,6 +174,7 @@
 			children = (
 				AAE1E2B02770C2F10008021F /* PinField */,
 				AAE1E2AC2770BD930008021F /* ExDividerView.swift */,
+				AAE1E3142772187A0008021F /* ButtonView.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -183,6 +185,18 @@
 				AAE1E2B12770C31D0008021F /* OTPTextFieldView.swift */,
 			);
 			path = PinField;
+			sourceTree = "<group>";
+		};
+		AAE1E3112772141A0008021F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				841CE9472742340C003EEF0F /* SplashView.swift */,
+				AAE1E2A72770BC540008021F /* EmailPhoneView.swift */,
+				AAE1E2A92770BD140008021F /* NumberPhoneView.swift */,
+				AAE1E2AE2770BE250008021F /* ConfirmCodeView.swift */,
+				AAE1E312277214690008021F /* NameRegistView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,12 +341,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				841CE9482742340C003EEF0F /* SplashView.swift in Sources */,
+				AAE1E313277214690008021F /* NameRegistView.swift in Sources */,
 				AAE1E2AD2770BD930008021F /* ExDividerView.swift in Sources */,
 				AAE1E2AF2770BE260008021F /* ConfirmCodeView.swift in Sources */,
 				AAE1E2A82770BC540008021F /* EmailPhoneView.swift in Sources */,
 				AAE1E2AA2770BD140008021F /* NumberPhoneView.swift in Sources */,
 				AAE1E2B22770C31D0008021F /* OTPTextFieldView.swift in Sources */,
 				841CE9462742340C003EEF0F /* kino_transportsApp.swift in Sources */,
+				AAE1E3152772187A0008021F /* ButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

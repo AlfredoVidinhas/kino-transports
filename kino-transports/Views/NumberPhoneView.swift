@@ -57,15 +57,8 @@ struct NumberPhoneView: View {
                     let impactMed = UIImpactFeedbackGenerator(style: .medium)
                     impactMed.impactOccurred()
                 }, label: {
-                    NavigationLink(destination: NumberPhoneView(), label: {
-                        Text("Continuar")
-                            .frame(maxWidth: .infinity, maxHeight: 56)
-                            .foregroundColor(Color.white)
-                            .font(Font.custom("Poppins-Medium", size: 18))
-                            .background(Color.accentColor)
-                            .cornerRadius(16)
-                            .padding(.horizontal, 20)
-                            .padding(.bottom, 20)
+                    NavigationLink(destination: ConfirmCodeView(), label: {
+                        ButtonView(text: "Continuar")
                     })
                 })
                 

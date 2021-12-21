@@ -28,7 +28,7 @@ struct SplashView: View {
                         let impactMed = UIImpactFeedbackGenerator(style: .medium)
                         impactMed.impactOccurred()
                     }, label: {
-                        NavigationLink(destination: EmailPhoneView().navigationBarHidden(true), label: {
+                        NavigationLink(destination: NumberPhoneView().navigationBarHidden(true), label: {
                             Text("Começar a Explorar")
                                 .frame(maxWidth: .infinity, maxHeight: 56)
                                 .foregroundColor(Color("BotaoTextoColor"))
