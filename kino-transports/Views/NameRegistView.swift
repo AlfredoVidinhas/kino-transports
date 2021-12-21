@@ -43,7 +43,7 @@ struct NameRegistView: View {
                     let impactMed = UIImpactFeedbackGenerator(style: .medium)
                     impactMed.impactOccurred()
                 }, label: {
-                    NavigationLink(destination: ConfirmCodeView().navigationBarHidden(true), label: {
+                    NavigationLink(destination: HomeView().navigationBarHidden(true), label: {
                         ButtonView(text: "Chamar um Kino")
                     })
                 })

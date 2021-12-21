@@ -27,6 +27,7 @@
 		AAE1E3102771E4F70008021F /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = AAE1E30F2771E4F70008021F /* SwiftUIX */; };
 		AAE1E313277214690008021F /* NameRegistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E312277214690008021F /* NameRegistView.swift */; };
 		AAE1E3152772187A0008021F /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E3142772187A0008021F /* ButtonView.swift */; };
+		AAE1E3172772283A0008021F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E3162772283A0008021F /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		AAE1E2B12770C31D0008021F /* OTPTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextFieldView.swift; sourceTree = "<group>"; };
 		AAE1E312277214690008021F /* NameRegistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameRegistView.swift; sourceTree = "<group>"; };
 		AAE1E3142772187A0008021F /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		AAE1E3162772283A0008021F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 				AAE1E2A92770BD140008021F /* NumberPhoneView.swift */,
 				AAE1E2AE2770BE250008021F /* ConfirmCodeView.swift */,
 				AAE1E312277214690008021F /* NameRegistView.swift */,
+				AAE1E3162772283A0008021F /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				841CE9482742340C003EEF0F /* SplashView.swift in Sources */,
 				AAE1E313277214690008021F /* NameRegistView.swift in Sources */,
 				AAE1E2AD2770BD930008021F /* ExDividerView.swift in Sources */,
+				AAE1E3172772283A0008021F /* HomeView.swift in Sources */,
 				AAE1E2AF2770BE260008021F /* ConfirmCodeView.swift in Sources */,
 				AAE1E2A82770BC540008021F /* EmailPhoneView.swift in Sources */,
 				AAE1E2AA2770BD140008021F /* NumberPhoneView.swift in Sources */,
