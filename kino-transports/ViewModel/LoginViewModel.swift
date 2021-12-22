@@ -29,9 +29,12 @@ class LoginViewModel: ObservableObject{
         print("passou")
         
         Auth.auth().settings?.isAppVerificationDisabledForTesting = true
-        
+        loading = true
         let number = "+244\(phoneNumber)"
         PhoneAuthProvider.provider().verifyPhoneNumber(number, uiDelegate: nil) { CODE, err in
+            
+            self.loading = false
+            
             if let error = err{
                 self.errorMsg = error.localizedDescription
                 self.error.toggle()

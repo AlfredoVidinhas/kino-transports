@@ -14,6 +14,7 @@ public struct OTPTextFieldView: View {
     
     @State var pin: String = ""
     @State var isDisabled = false
+    @State var error = false
 
     var handler: (String, (Bool) -> Void) -> Void
     
@@ -28,19 +29,19 @@ public struct OTPTextFieldView: View {
     }
     
     private var pinDots: some View {
-        HStack(spacing:14) {
+        HStack(spacing:10) {
             ForEach(0..<maxDigits) { index in
                 ZStack {
                     
                     RoundedRectangle(cornerRadius: 5)
                         .foregroundColor(.clear)
                     .padding()
-                        .background(RoundedRectangle(cornerRadius: 5)            .stroke(Color(.lightGray), lineWidth: 0.5))
-                        .frame(width: 60, height: 60)
+                    .background(RoundedRectangle(cornerRadius: 5)            .stroke(Color(.lightGray), lineWidth: 0.5))
+                        .frame(width: 45, height: 50)
                     
                     
                     Text(self.getDigits(at: index))
-                        .font(.system(size: 50, weight: .thin, design: .default))
+                        .font(.system(size: 40, weight: .thin, design: .default))
                 }
                 
 
@@ -74,10 +75,12 @@ public struct OTPTextFieldView: View {
             
             handler(pin) { isSuccess in
                 if isSuccess {
+                    error = false
                     print("pin matched, go to next page, no action to perfrom here")
                 } else {
-                    pin = ""
+                    //pin = ""
                     isDisabled = false
+                    error = true
                     print("this has to called after showing toast why is the failure")
                 }
             }

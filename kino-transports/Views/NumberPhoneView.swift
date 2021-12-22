@@ -68,6 +68,10 @@ struct NumberPhoneView: View {
                 })
                 
             }
+            
+            if loginData.loading{
+                LoadingView(show: .constant(true), placeHolder: "Enviando...")
+            }
         }
     }
 }

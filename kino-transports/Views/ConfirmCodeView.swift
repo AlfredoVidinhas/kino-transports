@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ConfirmCodeView: View {
-    @State private var isOtpMatching = false
+    @State private var isOtpMatching = true
     @State private var codeNum = "1234"
     @StateObject var loginData = LoginViewModel()
     
@@ -29,6 +29,19 @@ struct ConfirmCodeView: View {
                     HStack{
                         OTPTextFieldView { otp, completionHandler in
                             loginData.code = otp
+                            
+                            if loginData.error{
+                                print("________ Ero _____")
+                                completionHandler(false)
+                            }
+                            
+                            if otp.count == 6{
+                                isOtpMatching = false
+                            }
+                            else{
+                                isOtpMatching = true
+                            }
+                            
                             /*if otp == "123456" { // this could be a network call
                                 completionHandler(true)
                                 isOtpMatching = true
@@ -56,9 +69,12 @@ struct ConfirmCodeView: View {
                     loginData.verifyCode()
                 }, label: {
                     ButtonView(text: "Avançar")
-                })
+                }).disabled(isOtpMatching)
             }
             
+            if loginData.loading{
+                LoadingView(show: .constant(true), placeHolder: "Confirmando...")
+            }
         }
     }
 }

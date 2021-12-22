@@ -8,9 +8,10 @@
 import SwiftUI
 import CoreLocation
 import MapKit
+import Firebase
 
 struct HomeView: View {
-    
+    @AppStorage("log_Status") var status = false
     @State private var region = MKCoordinateRegion(
             center: CLLocationCoordinate2D(latitude: 37.334_900,
                                            longitude: -122.009_020),
@@ -43,7 +44,17 @@ struct HomeView: View {
                     .padding(.leading, 15)
                     .padding(.bottom, 20)
                     
-                    ButtonView(text: "Confirmar")
+                    Button(action: {
+                        do{
+                            try Auth.auth().signOut()
+                            withAnimation{status = false}
+                        }
+                        catch{
+                            print("Fail: \(error)")
+                        }
+                    }, label: {
+                        ButtonView(text: "Confirmar")
+                    })
                 }
                 .frame(maxWidth: .infinity, minHeight: 300)
                 .background(Color("FundoColor"))

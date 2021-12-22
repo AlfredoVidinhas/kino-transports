@@ -14,6 +14,7 @@
 		841CE9572742340F003EEF0F /* kino_transportsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CE9562742340F003EEF0F /* kino_transportsTests.swift */; };
 		841CE9612742340F003EEF0F /* kino_transportsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CE9602742340F003EEF0F /* kino_transportsUITests.swift */; };
 		841CE9632742340F003EEF0F /* kino_transportsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CE9622742340F003EEF0F /* kino_transportsUITestsLaunchTests.swift */; };
+		845F2D9C2773C6F30038B5E5 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 845F2D9B2773C6F30038B5E5 /* SwiftUIX */; };
 		84845ACD2743019F00345E5D /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84845AC82743019F00345E5D /* Poppins-Light.ttf */; };
 		84845ACE2743019F00345E5D /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84845AC92743019F00345E5D /* Poppins-Medium.ttf */; };
 		84845ACF2743019F00345E5D /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84845ACA2743019F00345E5D /* Poppins-Regular.ttf */; };
@@ -24,7 +25,6 @@
 		AAE1E2AD2770BD930008021F /* ExDividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E2AC2770BD930008021F /* ExDividerView.swift */; };
 		AAE1E2AF2770BE260008021F /* ConfirmCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E2AE2770BE250008021F /* ConfirmCodeView.swift */; };
 		AAE1E2B22770C31D0008021F /* OTPTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E2B12770C31D0008021F /* OTPTextFieldView.swift */; };
-		AAE1E3102771E4F70008021F /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = AAE1E30F2771E4F70008021F /* SwiftUIX */; };
 		AAE1E313277214690008021F /* NameRegistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E312277214690008021F /* NameRegistView.swift */; };
 		AAE1E3152772187A0008021F /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E3142772187A0008021F /* ButtonView.swift */; };
 		AAE1E3172772283A0008021F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E3162772283A0008021F /* HomeView.swift */; };
@@ -91,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAE1E3102771E4F70008021F /* SwiftUIX in Frameworks */,
+				845F2D9C2773C6F30038B5E5 /* SwiftUIX in Frameworks */,
 				AAF148BB2773591100211A18 /* FirebaseAuth in Frameworks */,
 				AAF148BD2773591100211A18 /* FirebaseFirestore in Frameworks */,
 			);
@@ -246,9 +246,9 @@
 			);
 			name = "kino-transports";
 			packageProductDependencies = (
-				AAE1E30F2771E4F70008021F /* SwiftUIX */,
 				AAF148BA2773591100211A18 /* FirebaseAuth */,
 				AAF148BC2773591100211A18 /* FirebaseFirestore */,
+				845F2D9B2773C6F30038B5E5 /* SwiftUIX */,
 			);
 			productName = "kino-transports";
 			productReference = 841CE9422742340C003EEF0F /* kino-transports.app */;
@@ -323,8 +323,8 @@
 			);
 			mainGroup = 841CE9392742340C003EEF0F;
 			packageReferences = (
-				AAE1E30E2771E4F70008021F /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 				AAF148B92773591100211A18 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				845F2D9A2773C6F30038B5E5 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 			);
 			productRefGroup = 841CE9432742340C003EEF0F /* Products */;
 			projectDirPath = "";
@@ -740,12 +740,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		AAE1E30E2771E4F70008021F /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+		845F2D9A2773C6F30038B5E5 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.1;
+				branch = master;
+				kind = branch;
 			};
 		};
 		AAF148B92773591100211A18 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
@@ -759,9 +759,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AAE1E30F2771E4F70008021F /* SwiftUIX */ = {
+		845F2D9B2773C6F30038B5E5 /* SwiftUIX */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AAE1E30E2771E4F70008021F /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			package = 845F2D9A2773C6F30038B5E5 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
 			productName = SwiftUIX;
 		};
 		AAF148BA2773591100211A18 /* FirebaseAuth */ = {
