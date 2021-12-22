@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>748603221217-coic1oaq8oa1gm0biml268iqglv2f1q9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.748603221217-coic1oaq8oa1gm0biml268iqglv2f1q9</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCzqz35Y_tRaiA5OEOx-fRs4U8z56zVsXE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>748603221217</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>kino.kino-transports</string>
+	<key>PROJECT_ID</key>
+	<string>kino-transports</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kino-transports.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:748603221217:ios:9dfa3e381854b5583d83a0</string>
+</dict>
+</plist>

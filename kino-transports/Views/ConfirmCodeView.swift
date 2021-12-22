@@ -10,6 +10,7 @@ import SwiftUI
 struct ConfirmCodeView: View {
     @State private var isOtpMatching = false
     @State private var codeNum = "1234"
+    @StateObject var loginData = LoginViewModel()
     
     var body: some View {
         ZStack{
@@ -27,13 +28,14 @@ struct ConfirmCodeView: View {
                     
                     HStack{
                         OTPTextFieldView { otp, completionHandler in
-                            if otp == "1234" { // this could be a network call
+                            loginData.code = otp
+                            /*if otp == "123456" { // this could be a network call
                                 completionHandler(true)
                                 isOtpMatching = true
                             } else {
                                 completionHandler(false)
                                 isOtpMatching = false
-                            }
+                            }*/
                         }
                     }.padding(.vertical, 40)
                     
@@ -43,13 +45,17 @@ struct ConfirmCodeView: View {
                 
                 Spacer()
                 
+                NavigationLink(destination: NameRegistView().navigationBarHidden(true), isActive: $loginData.status) {
+                    Text("")
+                        .hidden()
+                }
+                
                 Button(action: {
                     let impactMed = UIImpactFeedbackGenerator(style: .medium)
                     impactMed.impactOccurred()
+                    loginData.verifyCode()
                 }, label: {
-                    NavigationLink(destination: NameRegistView().navigationBarHidden(true), label: {
-                        ButtonView(text: "Avançar")
-                    }).disabled(!isOtpMatching)
+                    ButtonView(text: "Avançar")
                 })
             }
             

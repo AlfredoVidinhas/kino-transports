@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-struct SplashView: View {
+struct SplashView: View {    
     var body: some View {
         NavigationView {
             ZStack{

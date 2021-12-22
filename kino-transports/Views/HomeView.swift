@@ -19,35 +19,34 @@ struct HomeView: View {
         )
     
     var body: some View {
-        ZStack{
-            Map(coordinateRegion: $region)
-            
-            VStack{
+        VStack{
+            ZStack{
+                Map(coordinateRegion: $region)
+                
                 HStack{
                     
                 }
-                
-                Spacer()
-                
+            }
+            
+            VStack{
                 VStack{
-                    HStack{
-                        HStack{
-                            Circle().frame(width: 9, height: 9)
-                            Text("Qual o ponto de partida?")
+                    SearchStatusView()
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 28){
+                            CardSelectView(legenda: "Casa", local: "Viana", icon: "icon_home")
+                            CardSelectView(legenda: "Trabalho", local: "Trinta Praça", icon: "icon_home")
                         }
-                        Spacer()
-                        
+                        .padding(.leading, 5)
+                        .padding(.trailing, 20)
                     }
-                    .frame(maxWidth: .infinity, maxHeight: 56)
-                    .background(Color("CinzaColor"))
-                    .cornerRadius(4)
-                    .padding(.horizontal, 20)
+                    .padding(.leading, 15)
                     .padding(.bottom, 20)
+                    
+                    ButtonView(text: "Confirmar")
                 }
                 .frame(maxWidth: .infinity, minHeight: 300)
-                .background(Color.white)
-                
-                
+                .background(Color("FundoColor"))
             }
         }.ignoresSafeArea()
     }

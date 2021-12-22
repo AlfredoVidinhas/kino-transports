@@ -10,6 +10,7 @@ import Combine
 
 struct NumberPhoneView: View {
     @State private var numOfPeople = ""
+    @StateObject var loginData = LoginViewModel()
     
     var body: some View {
         ZStack {
@@ -29,15 +30,15 @@ struct NumberPhoneView: View {
                             .overlay(ExDivider().offset(x: 0, y: 20))
                             .padding(.trailing, 20)
                         
-                        TextField("Número de Telefone", text: $numOfPeople)
+                        TextField("Número de Telefone", text: $loginData.phoneNumber)
                             .font(Font.custom("Poppins-Regular", size: 18))
                             .foregroundColor(Color("TextoColor"))
                             .overlay(ExDivider().offset(x: 0, y: 20))
                             .keyboardType(.numberPad)
-                            .onReceive(Just(numOfPeople)) { newValue in
+                            .onReceive(Just(loginData.phoneNumber)) { newValue in
                                 let filtered = newValue.filter { "0123456789".contains($0) }
                                 if filtered != newValue {
-                                    self.numOfPeople = filtered
+                                    self.loginData.phoneNumber = filtered
                                 }
                             }
                     }.padding(.top, 50)
@@ -53,13 +54,17 @@ struct NumberPhoneView: View {
                 
                 Spacer()
                 
+                NavigationLink(destination: ConfirmCodeView(loginData: loginData), isActive: $loginData.gotoVerify) {
+                    Text("")
+                        .hidden()
+                }
+                
                 Button(action: {
                     let impactMed = UIImpactFeedbackGenerator(style: .medium)
                     impactMed.impactOccurred()
+                    loginData.sendCode()
                 }, label: {
-                    NavigationLink(destination: ConfirmCodeView(), label: {
-                        ButtonView(text: "Continuar")
-                    })
+                    ButtonView(text: "Continuar")
                 })
                 
             }

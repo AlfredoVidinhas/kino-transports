@@ -10,7 +10,7 @@ import SwiftUIX
 
 public struct OTPTextFieldView: View {
     
-    var maxDigits: Int = 4
+    var maxDigits: Int = 6
     
     @State var pin: String = ""
     @State var isDisabled = false

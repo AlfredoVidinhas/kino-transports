@@ -28,6 +28,13 @@
 		AAE1E313277214690008021F /* NameRegistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E312277214690008021F /* NameRegistView.swift */; };
 		AAE1E3152772187A0008021F /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E3142772187A0008021F /* ButtonView.swift */; };
 		AAE1E3172772283A0008021F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E3162772283A0008021F /* HomeView.swift */; };
+		AAF148AC2773152E00211A18 /* SearchStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF148AB2773152E00211A18 /* SearchStatusView.swift */; };
+		AAF148AE27731E2700211A18 /* CardSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF148AD27731E2700211A18 /* CardSelectView.swift */; };
+		AAF148B227732D5D00211A18 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAF148B127732D5D00211A18 /* GoogleService-Info.plist */; };
+		AAF148B827733A2300211A18 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF148B727733A2300211A18 /* LoginViewModel.swift */; };
+		AAF148BB2773591100211A18 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AAF148BA2773591100211A18 /* FirebaseAuth */; };
+		AAF148BD2773591100211A18 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AAF148BC2773591100211A18 /* FirebaseFirestore */; };
+		AAF148C12773815400211A18 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF148C02773815400211A18 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +79,11 @@
 		AAE1E312277214690008021F /* NameRegistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameRegistView.swift; sourceTree = "<group>"; };
 		AAE1E3142772187A0008021F /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		AAE1E3162772283A0008021F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AAF148AB2773152E00211A18 /* SearchStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStatusView.swift; sourceTree = "<group>"; };
+		AAF148AD27731E2700211A18 /* CardSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSelectView.swift; sourceTree = "<group>"; };
+		AAF148B127732D5D00211A18 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AAF148B727733A2300211A18 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		AAF148C02773815400211A18 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +92,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAE1E3102771E4F70008021F /* SwiftUIX in Frameworks */,
+				AAF148BB2773591100211A18 /* FirebaseAuth in Frameworks */,
+				AAF148BD2773591100211A18 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,9 +137,11 @@
 		841CE9442742340C003EEF0F /* kino-transports */ = {
 			isa = PBXGroup;
 			children = (
+				AAF148B6277339D400211A18 /* ViewModel */,
 				AAE1E2AB2770BD710008021F /* Controls */,
 				AAE1E3112772141A0008021F /* Views */,
 				84845AC62742FFA800345E5D /* Info.plist */,
+				AAF148B127732D5D00211A18 /* GoogleService-Info.plist */,
 				841CE9452742340C003EEF0F /* kino_transportsApp.swift */,
 				841CE9492742340E003EEF0F /* Assets.xcassets */,
 				84845AC72743019F00345E5D /* Poppins */,
@@ -177,6 +193,9 @@
 				AAE1E2B02770C2F10008021F /* PinField */,
 				AAE1E2AC2770BD930008021F /* ExDividerView.swift */,
 				AAE1E3142772187A0008021F /* ButtonView.swift */,
+				AAF148AB2773152E00211A18 /* SearchStatusView.swift */,
+				AAF148AD27731E2700211A18 /* CardSelectView.swift */,
+				AAF148C02773815400211A18 /* LoadingView.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -202,6 +221,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		AAF148B6277339D400211A18 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AAF148B727733A2300211A18 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -220,6 +247,8 @@
 			name = "kino-transports";
 			packageProductDependencies = (
 				AAE1E30F2771E4F70008021F /* SwiftUIX */,
+				AAF148BA2773591100211A18 /* FirebaseAuth */,
+				AAF148BC2773591100211A18 /* FirebaseFirestore */,
 			);
 			productName = "kino-transports";
 			productReference = 841CE9422742340C003EEF0F /* kino-transports.app */;
@@ -295,6 +324,7 @@
 			mainGroup = 841CE9392742340C003EEF0F;
 			packageReferences = (
 				AAE1E30E2771E4F70008021F /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+				AAF148B92773591100211A18 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 841CE9432742340C003EEF0F /* Products */;
 			projectDirPath = "";
@@ -313,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				841CE94D2742340E003EEF0F /* Preview Assets.xcassets in Resources */,
+				AAF148B227732D5D00211A18 /* GoogleService-Info.plist in Resources */,
 				84845AD12743019F00345E5D /* Poppins-SemiBold.ttf in Resources */,
 				84845AD02743019F00345E5D /* Poppins-Bold.ttf in Resources */,
 				84845ACE2743019F00345E5D /* Poppins-Medium.ttf in Resources */,
@@ -345,11 +376,15 @@
 			files = (
 				841CE9482742340C003EEF0F /* SplashView.swift in Sources */,
 				AAE1E313277214690008021F /* NameRegistView.swift in Sources */,
+				AAF148AC2773152E00211A18 /* SearchStatusView.swift in Sources */,
 				AAE1E2AD2770BD930008021F /* ExDividerView.swift in Sources */,
 				AAE1E3172772283A0008021F /* HomeView.swift in Sources */,
+				AAF148C12773815400211A18 /* LoadingView.swift in Sources */,
 				AAE1E2AF2770BE260008021F /* ConfirmCodeView.swift in Sources */,
 				AAE1E2A82770BC540008021F /* EmailPhoneView.swift in Sources */,
 				AAE1E2AA2770BD140008021F /* NumberPhoneView.swift in Sources */,
+				AAF148B827733A2300211A18 /* LoginViewModel.swift in Sources */,
+				AAF148AE27731E2700211A18 /* CardSelectView.swift in Sources */,
 				AAE1E2B22770C31D0008021F /* OTPTextFieldView.swift in Sources */,
 				841CE9462742340C003EEF0F /* kino_transportsApp.swift in Sources */,
 				AAE1E3152772187A0008021F /* ButtonView.swift in Sources */,
@@ -713,6 +748,14 @@
 				minimumVersion = 0.1.1;
 			};
 		};
+		AAF148B92773591100211A18 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -720,6 +763,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AAE1E30E2771E4F70008021F /* XCRemoteSwiftPackageReference "SwiftUIX" */;
 			productName = SwiftUIX;
+		};
+		AAF148BA2773591100211A18 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAF148B92773591100211A18 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		AAF148BC2773591100211A18 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAF148B92773591100211A18 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
