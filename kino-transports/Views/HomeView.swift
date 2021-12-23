@@ -21,55 +21,57 @@ struct HomeView: View {
     
     var body: some View {
         VStack{
-            ZStack{
-                Map(coordinateRegion: $region)
-                
-                HStack{
-                    Circle()
-                        .frame(width: 40, height: 40)
-                        .foregroundColor(Color.accentColor)
-                }
-                .frame(minWidth: .infinity)
-                .background(Color.red)
-                
-            }
+            Map(coordinateRegion: $region)
             
             VStack{
-                VStack{
-                    SearchStatusView()
-                    
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 28){
-                            CardSelectView(legenda: "Casa", local: "Viana", icon: "icon_home")
-                            CardSelectView(legenda: "Trabalho", local: "Trinta Praça", icon: "icon_home")
-                        }
-                        .padding(.leading, 5)
-                        .padding(.trailing, 20)
+                SearchStatusView()
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 28){
+                        CardSelectView(legenda: "Casa", local: "Viana", icon: "icon_home")
+                        CardSelectView(legenda: "Trabalho", local: "Trinta Praça", icon: "icon_home")
                     }
-                    .padding(.leading, 15)
-                    .padding(.bottom, 20)
-                    
-                    Button(action: {
-                        do{
-                            try Auth.auth().signOut()
-                            withAnimation{status = false}
-                        }
-                        catch{
-                            print("Fail: \(error)")
-                        }
-                    }, label: {
-                        ButtonView(text: "Confirmar")
-                    })
+                    .padding(.leading, 5)
+                    .padding(.trailing, 20)
                 }
-                .frame(maxWidth: .infinity, minHeight: 300)
-                .background(Color("FundoColor"))
+                .padding(.leading, 15)
+                .padding(.bottom, 20)
+                
+                Button(action: {
+                    do{
+                        try Auth.auth().signOut()
+                        withAnimation{status = false}
+                    }
+                    catch{
+                        print("Fail: \(error)")
+                    }
+                }, label: {
+                    ButtonView(text: "Confirmar")
+                })
             }
-        }.ignoresSafeArea()
+            .frame(maxWidth: .infinity, minHeight: 300)
+            .background(Color("FundoColor"))
+        }
+        .ignoresSafeArea()
+        .safeAreaInset(edge: .top, alignment: .leading) {
+            
+            Button(action: {}, label: {
+                Image("icon_menu")
+                    .frame(width: 40, height: 40)
+                    .background(Color.accentColor)
+                    .clipShape(Circle())
+                    .background(Circle())
+                    .shadow(color: Color("Shadow"), radius: 15, x: 0, y: 10)
+                    .padding(.leading, 20)
+            })
+        }
+        
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            
     }
 }
