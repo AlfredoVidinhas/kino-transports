@@ -28,7 +28,7 @@ class LoginViewModel: ObservableObject{
     func sendCode(){
         print("passou")
         
-        //Auth.auth().settings?.isAppVerificationDisabledForTesting = true
+        Auth.auth().settings?.isAppVerificationDisabledForTesting = true
         loading = true
         let number = "+244\(phoneNumber)"
         PhoneAuthProvider.provider().verifyPhoneNumber(number, uiDelegate: nil) { CODE, err in

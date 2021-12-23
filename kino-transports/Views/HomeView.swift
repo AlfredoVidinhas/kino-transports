@@ -25,8 +25,13 @@ struct HomeView: View {
                 Map(coordinateRegion: $region)
                 
                 HStack{
-                    
+                    Circle()
+                        .frame(width: 40, height: 40)
+                        .foregroundColor(Color.accentColor)
                 }
+                .frame(minWidth: .infinity)
+                .background(Color.red)
+                
             }
             
             VStack{
