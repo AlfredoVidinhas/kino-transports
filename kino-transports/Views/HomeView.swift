@@ -21,7 +21,21 @@ struct HomeView: View {
     
     var body: some View {
         VStack{
-            Map(coordinateRegion: $region)
+            
+            
+            ZStack(alignment: .top){
+                Map(coordinateRegion: $region).ignoresSafeArea()
+                
+                Button(action: {}, label: {
+                    Image("icon_menu")
+                        .frame(width: 40, height: 40)
+                        .background(Color.accentColor)
+                        .clipShape(Circle())
+                        .background(Circle())
+                        .shadow(color: Color("Shadow"), radius: 15, x: 0, y: 10)
+                        .padding(.leading, 20)
+                })
+            }
             
             VStack{
                 SearchStatusView()
@@ -51,19 +65,12 @@ struct HomeView: View {
             }
             .frame(maxWidth: .infinity, minHeight: 300)
             .background(Color("FundoColor"))
+            .ignoresSafeArea()
         }
-        .ignoresSafeArea()
+        
         .safeAreaInset(edge: .top, alignment: .leading) {
             
-            Button(action: {}, label: {
-                Image("icon_menu")
-                    .frame(width: 40, height: 40)
-                    .background(Color.accentColor)
-                    .clipShape(Circle())
-                    .background(Circle())
-                    .shadow(color: Color("Shadow"), radius: 15, x: 0, y: 10)
-                    .padding(.leading, 20)
-            })
+            
         }
         
     }

@@ -20,6 +20,7 @@
 		84845ACF2743019F00345E5D /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84845ACA2743019F00345E5D /* Poppins-Regular.ttf */; };
 		84845AD02743019F00345E5D /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84845ACB2743019F00345E5D /* Poppins-Bold.ttf */; };
 		84845AD12743019F00345E5D /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84845ACC2743019F00345E5D /* Poppins-SemiBold.ttf */; };
+		AAA62DED2779C14B0039F371 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA62DEC2779C14B0039F371 /* MainView.swift */; };
 		AAE1E2A82770BC540008021F /* EmailPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E2A72770BC540008021F /* EmailPhoneView.swift */; };
 		AAE1E2AA2770BD140008021F /* NumberPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E2A92770BD140008021F /* NumberPhoneView.swift */; };
 		AAE1E2AD2770BD930008021F /* ExDividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E2AC2770BD930008021F /* ExDividerView.swift */; };
@@ -71,6 +72,7 @@
 		84845ACA2743019F00345E5D /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		84845ACB2743019F00345E5D /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		84845ACC2743019F00345E5D /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		AAA62DEC2779C14B0039F371 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		AAE1E2A72770BC540008021F /* EmailPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPhoneView.swift; sourceTree = "<group>"; };
 		AAE1E2A92770BD140008021F /* NumberPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPhoneView.swift; sourceTree = "<group>"; };
 		AAE1E2AC2770BD930008021F /* ExDividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExDividerView.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				AAE1E2AE2770BE250008021F /* ConfirmCodeView.swift */,
 				AAE1E312277214690008021F /* NameRegistView.swift */,
 				AAE1E3162772283A0008021F /* HomeView.swift */,
+				AAA62DEC2779C14B0039F371 /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				AAF148AE27731E2700211A18 /* CardSelectView.swift in Sources */,
 				AAE1E2B22770C31D0008021F /* OTPTextFieldView.swift in Sources */,
 				841CE9462742340C003EEF0F /* kino_transportsApp.swift in Sources */,
+				AAA62DED2779C14B0039F371 /* MainView.swift in Sources */,
 				AAE1E3152772187A0008021F /* ButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
