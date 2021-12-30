@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 struct NameRegistView: View {
-    @State private var numOfPeople = ""
+    @StateObject var registerData = RegisterViewModel()
     
     var body: some View {
         ZStack {
@@ -25,12 +25,12 @@ struct NameRegistView: View {
                         .foregroundColor(Color("TextoColor"))
                         .frame(maxWidth: .infinity, alignment: .leading)
             
-                    TextField("Primeiro e ultimo nome", text: $numOfPeople)
+                    TextField("Primeiro e ultimo nome", text: $registerData.userName)
                         .font(Font.custom("Poppins-Regular", size: 18))
                         .foregroundColor(Color("TextoColor"))
                         .overlay(ExDivider().offset(x: 0, y: 20))
                         .keyboardType(.namePhonePad)
-                        .onReceive(Just(numOfPeople)) { newValue in
+                        .onReceive(Just(registerData.userName)) { newValue in
                     }.padding(.top, 50)
                     
                 }
@@ -42,12 +42,16 @@ struct NameRegistView: View {
                 Button(action: {
                     let impactMed = UIImpactFeedbackGenerator(style: .medium)
                     impactMed.impactOccurred()
+                    registerData.registerUser()
                 }, label: {
-                    NavigationLink(destination: HomeView().navigationBarHidden(true), label: {
-                        ButtonView(text: "Chamar um Kino")
-                    })
+                    ButtonView(text: "Chamar um Kino")
                 })
+                    .disabled(registerData.userName == "")
                 
+            }
+            
+            if registerData.loading{
+                LoadingView(show: .constant(true), placeHolder: "Guardando...")
             }
         }
     }

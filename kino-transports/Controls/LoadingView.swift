@@ -25,7 +25,7 @@ struct LoadingView: View {
         }
         .padding(.vertical, 25)
         .padding(.horizontal, 35)
-        .background(BlurView())
+        .background(BlurView(blurEffect: .constant(.systemThinMaterial)))
         .cornerRadius(20)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(
@@ -42,8 +42,9 @@ struct LoadingView: View {
 //background
 
 struct BlurView : UIViewRepresentable {
+    @Binding var blurEffect: UIBlurEffect.Style
     func makeUIView(context: Context) -> UIVisualEffectView {
-        let view = UIVisualEffectView(effect: UIBlurEffect(style: .systemThinMaterial))
+        let view = UIVisualEffectView(effect: UIBlurEffect(style: blurEffect))
         return view
     }
     

@@ -21,6 +21,8 @@ class LoginViewModel: ObservableObject{
     @Published var gotoVerify = false
     @Published var loading = false
     
+    @Published var registerUser = false
+    
     // user logged Status
     @AppStorage("log_Status") var status = false
     
@@ -28,7 +30,7 @@ class LoginViewModel: ObservableObject{
     func sendCode(){
         print("passou")
         
-        Auth.auth().settings?.isAppVerificationDisabledForTesting = true
+        //Auth.auth().settings?.isAppVerificationDisabledForTesting = true
         loading = true
         let number = "+244\(phoneNumber)"
         PhoneAuthProvider.provider().verifyPhoneNumber(number, uiDelegate: nil) { CODE, err in
@@ -54,8 +56,6 @@ class LoginViewModel: ObservableObject{
         
         Auth.auth().signIn(with: credential) { result, err in
             
-            self.loading = false
-            
             if let error = err{
                 self.errorMsg = error.localizedDescription
                 self.error.toggle()
@@ -64,7 +64,25 @@ class LoginViewModel: ObservableObject{
             
             // else user logged in Successfully
             print("passou: \(self.status)?????")
-            self.status = true
+            self.checkUser()
+        }
+    }
+    
+    func checkUser(){
+        let ref = Firestore.firestore()
+        let uid = Auth.auth().currentUser!.uid
+        
+        ref.collection("Users").document(uid).getDocument { document, err in
+            
+            self.loading = false
+            
+            if let document = document, document.exists {
+                self.status = true
+            } else {
+                self.registerUser.toggle()
+            }
+            
+            return
         }
     }
 }

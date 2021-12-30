@@ -58,7 +58,7 @@ struct ConfirmCodeView: View {
                 
                 Spacer()
                 
-                NavigationLink(destination: NameRegistView().navigationBarHidden(true), isActive: $loginData.status) {
+                NavigationLink(destination: NameRegistView().navigationBarHidden(true), isActive: $loginData.registerUser) {
                     Text("")
                         .hidden()
                 }

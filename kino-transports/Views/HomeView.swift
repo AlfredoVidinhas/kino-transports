@@ -9,32 +9,41 @@ import SwiftUI
 import CoreLocation
 import MapKit
 import Firebase
+import Combine
 
 struct HomeView: View {
+    @Binding var showMenu: Bool
     @AppStorage("log_Status") var status = false
-    @State private var region = MKCoordinateRegion(
-            center: CLLocationCoordinate2D(latitude: 37.334_900,
-                                           longitude: -122.009_020),
-            latitudinalMeters: 750,
-            longitudinalMeters: 750
-        )
+    
+    @ObservedObject private var locationManager = LocationManager()
+    @State private var region = MKCoordinateRegion.defaultRegion
+    @State private var cancellable: AnyCancellable?
     
     var body: some View {
         VStack{
-            
-            
-            ZStack(alignment: .top){
-                Map(coordinateRegion: $region).ignoresSafeArea()
+            ZStack (alignment: .bottom){
+                Map(coordinateRegion: $region, interactionModes: .all, showsUserLocation: true, userTrackingMode: nil)
                 
-                Button(action: {}, label: {
-                    Image("icon_menu")
-                        .frame(width: 40, height: 40)
-                        .background(Color.accentColor)
-                        .clipShape(Circle())
-                        .background(Circle())
-                        .shadow(color: Color("Shadow"), radius: 15, x: 0, y: 10)
-                        .padding(.leading, 20)
-                })
+                HStack{
+                    Spacer()
+                    Button(action: {
+                        withAnimation{
+                            let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                            impactMed.impactOccurred()
+                            setCurrentLocation()
+                        }
+                    }, label: {
+                        Image("icon_current_location")
+                            .resizable()
+                            .frame(width: 25, height: 25)
+                            .background(Color.accentColor)
+                            .clipShape(Circle())
+                            .background(Circle().frame(width: 38, height: 38))
+                            .shadow(color: Color("Shadow"), radius: 15, x: 0, y: 10)
+                    })
+                }
+                .padding(.horizontal, 24)
+                .padding(.bottom, 30)
             }
             
             VStack{
@@ -65,20 +74,40 @@ struct HomeView: View {
             }
             .frame(maxWidth: .infinity, minHeight: 300)
             .background(Color("FundoColor"))
-            .ignoresSafeArea()
+        }
+        .ignoresSafeArea()
+        .safeAreaInset(edge: .top, alignment: .leading){
+            Button(action: {
+                withAnimation{
+                    let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                    impactMed.impactOccurred()
+                    self.showMenu = true
+                }
+            }, label: {
+                Image("icon_menu")
+                    .frame(width: 40, height: 40)
+                    .background(Color.accentColor)
+                    .clipShape(Circle())
+                    .background(Circle())
+                    .shadow(color: Color("Shadow"), radius: 15, x: 0, y: 10)
+                    .padding(.leading, 20)
+            }).padding(.top, UIDevice.current.hasTopNotch ? 3 : 15)
+        }
+        .onAppear{
+            setCurrentLocation()
         }
         
-        .safeAreaInset(edge: .top, alignment: .leading) {
-            
-            
+    }
+    
+    private func setCurrentLocation() {
+        cancellable = locationManager.$location.sink { location in
+            region = MKCoordinateRegion(center: location?.coordinate ?? CLLocationCoordinate2D(), latitudinalMeters: 500, longitudinalMeters: 500)
         }
-        
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
-            
+        HomeView(showMenu: .constant(false))
     }
 }

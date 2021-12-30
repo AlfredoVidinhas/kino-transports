@@ -17,7 +17,7 @@ struct kino_transportsApp: App {
     var body: some Scene {
         WindowGroup {
             if status{
-                HomeView()
+                MainView()
             }
             else{
                 SplashView()
