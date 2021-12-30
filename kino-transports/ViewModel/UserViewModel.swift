@@ -25,7 +25,7 @@ class UserViewModel : ObservableObject{
             let userName = user.data()?["userName"] as! String
             let email = user.data()?["email"] as! String
             let isDriver = user.data()?["isDriver"] as! Bool
-            let dateCreated = user.data()?["dateCreated"] as! Timestamp
+            //let dateCreated = user.data()?["dateCreated"] as! Timestamp
             
             DispatchQueue.main.async {
                 self.userInfo = UserModel(userName: userName, email: email, isDriver: isDriver, dateCreated: Date())

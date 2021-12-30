@@ -23,6 +23,11 @@ struct HomeView: View {
         VStack{
             ZStack (alignment: .bottom){
                 Map(coordinateRegion: $region, interactionModes: .all, showsUserLocation: true, userTrackingMode: nil)
+                    .onChange(of: region.center.latitude) { newRegion in
+                        // the region changed to newRegion
+                        print("lat: \(region.center.latitude)")
+                    }
+                //MapView(region: $region)
                 
                 HStack{
                     Spacer()
@@ -103,6 +108,39 @@ struct HomeView: View {
         cancellable = locationManager.$location.sink { location in
             region = MKCoordinateRegion(center: location?.coordinate ?? CLLocationCoordinate2D(), latitudinalMeters: 500, longitudinalMeters: 500)
         }
+    }
+}
+
+struct MapView: UIViewRepresentable {
+    
+    @Binding var region: MKCoordinateRegion
+    
+    func makeUIView(context: Context) -> MKMapView {
+        let map = MKMapView()
+        //map.mapType = .standard
+        map.showsUserLocation = false
+        map.isRotateEnabled = false
+
+        map.setRegion(region, animated: true)
+        
+        print("Lat: \(map.centerCoordinate.latitude)")
+
+        /*let annotation = MyAnnotation(coordinate: location.coordinate)
+        annotation.title = "Title"
+        annotation.subtitle = "Subtitle"
+        map.addAnnotation(annotation)*/
+
+        return map
+    }
+
+    func updateUIView(_ uiView: MKMapView, context: Context) {
+        uiView.showsUserLocation = true
+        uiView.setRegion(region, animated: true)
+        print("Lat: \(uiView.centerCoordinate.latitude)")
+    }
+    
+    func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        print("Lat: \(mapView.centerCoordinate.latitude)")
     }
 }
 
