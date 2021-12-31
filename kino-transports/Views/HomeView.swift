@@ -31,7 +31,12 @@ struct HomeView: View {
                         // the region changed to newRegion
                         print("lat: \(region.center.latitude)")
                     }*/
-                MapView(centerCoordinate: $centerCoordinate, currentLocation: $currentLocation, withAnnotation: annotation)
+                
+                ZStack{
+                    MapView(centerCoordinate: $centerCoordinate, currentLocation: $currentLocation, withAnnotation: annotation)
+                    
+                    Image("icon_pin_center")
+                }
                 
                 HStack{
                     Spacer()
