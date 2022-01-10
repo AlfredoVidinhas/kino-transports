@@ -19,9 +19,10 @@ struct HomeView: View {
     @State private var region = MKCoordinateRegion.defaultRegion
     @State private var cancellable: AnyCancellable?
     
-    @State var centerCoordinate = CLLocationCoordinate2D()
+    @State var centerCoordinate = CLLocation()
     @State var currentLocation: CLLocationCoordinate2D?
     @State var annotation: MKPointAnnotation?
+    @State var streetName: String = ""
     
     var body: some View {
         VStack{
@@ -33,9 +34,9 @@ struct HomeView: View {
                     }*/
                 
                 ZStack{
-                    MapView(centerCoordinate: $centerCoordinate, currentLocation: $currentLocation, withAnnotation: annotation)
+                    MapView(centerCoordinate: $centerCoordinate, currentLocation: $currentLocation, streetName: $streetName, withAnnotation: annotation)
                     
-                    Image("icon_pin_center")
+                    Image("icon_pin_center").offset(y: -20)
                 }
                 
                 HStack{
@@ -61,7 +62,7 @@ struct HomeView: View {
             }
             
             VStack{
-                SearchStatusView()
+                SearchStatusView(text: streetName)
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 28){

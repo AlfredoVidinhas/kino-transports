@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SearchStatusView: View {
+    var text: String?
+    
     var body: some View {
         HStack{
             HStack(spacing: 12){
@@ -16,7 +18,7 @@ struct SearchStatusView: View {
                     .foregroundColor(Color.accentColor)
                     .padding(.leading)
                 
-                Text("Qual o ponto de partida?")
+                Text(text ?? "Qual o ponto de partida?")
                     .font(Font.custom("Poppins-Regular", size: 17))
                     .foregroundColor(Color("TextoColor"))
                 

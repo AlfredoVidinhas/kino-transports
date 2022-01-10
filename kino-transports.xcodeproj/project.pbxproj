@@ -29,6 +29,7 @@
 		AAA62DED2779C14B0039F371 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA62DEC2779C14B0039F371 /* MainView.swift */; };
 		AAD3E2D9277B20F8003B644F /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD3E2D8277B20F8003B644F /* MenuView.swift */; };
 		AAD3E2DC277B4C09003B644F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD3E2DB277B4C09003B644F /* Extension.swift */; };
+		AAD74179278C647C008E5D4D /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD74178278C647C008E5D4D /* MapViewModel.swift */; };
 		AAE1E2A82770BC540008021F /* EmailPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E2A72770BC540008021F /* EmailPhoneView.swift */; };
 		AAE1E2AA2770BD140008021F /* NumberPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E2A92770BD140008021F /* NumberPhoneView.swift */; };
 		AAE1E2AD2770BD930008021F /* ExDividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E2AC2770BD930008021F /* ExDividerView.swift */; };
@@ -89,6 +90,7 @@
 		AAA62DEC2779C14B0039F371 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		AAD3E2D8277B20F8003B644F /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		AAD3E2DB277B4C09003B644F /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		AAD74178278C647C008E5D4D /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		AAE1E2A72770BC540008021F /* EmailPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPhoneView.swift; sourceTree = "<group>"; };
 		AAE1E2A92770BD140008021F /* NumberPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPhoneView.swift; sourceTree = "<group>"; };
 		AAE1E2AC2770BD930008021F /* ExDividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExDividerView.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				AAF148B727733A2300211A18 /* LoginViewModel.swift */,
 				AA626706277C742600BB60AD /* RegisterViewModel.swift */,
 				AA62670B277C8D7A00BB60AD /* UserViewModel.swift */,
+				AAD74178278C647C008E5D4D /* MapViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				841CE9462742340C003EEF0F /* kino_transportsApp.swift in Sources */,
 				AAA62DED2779C14B0039F371 /* MainView.swift in Sources */,
 				AAE1E3152772187A0008021F /* ButtonView.swift in Sources */,
+				AAD74179278C647C008E5D4D /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
