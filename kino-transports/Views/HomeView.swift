@@ -26,11 +26,29 @@ struct HomeView: View {
             ZStack (alignment: .bottom){
                 ZStack{
                     MapView(mapModel: mapModel)
-                    Image("icon_pin_center").offset(y: -10)
+                    Image("icon_pin_init").offset(y: -10)
                 }
                 
                 HStack{
+                    if mapModel.hasStartPoint {
+                        Button(action: {
+                            withAnimation{
+                                let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                                impactMed.impactOccurred()
+                                mapModel.removeAllPoints()
+                            }
+                        }, label: {
+                            Image("icon_back")
+                                .frame(width: 38, height: 38)
+                                .background(Color.accentColor)
+                                .clipShape(Circle())
+                                .background(Circle())
+                                .shadow(color: Color("Shadow"), radius: 15, x: 0, y: 10)
+                        })
+                    }
+                    
                     Spacer()
+                    
                     Button(action: {
                         withAnimation{
                             let impactMed = UIImpactFeedbackGenerator(style: .medium)
@@ -39,46 +57,24 @@ struct HomeView: View {
                         }
                     }, label: {
                         Image("icon_current_location")
-                            .resizable()
-                            .frame(width: 25, height: 25)
+                            .frame(width: 38, height: 38)
                             .background(Color.accentColor)
                             .clipShape(Circle())
-                            .background(Circle().frame(width: 38, height: 38))
+                            .background(Circle())
                             .shadow(color: Color("Shadow"), radius: 15, x: 0, y: 10)
                     })
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, 20)
                 .padding(.bottom, 30)
             }
             
-            VStack{
-                SearchStatusView(text: mapModel.streetName)
-                
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 28){
-                        CardSelectView(legenda: "Casa", local: "Viana", icon: "icon_home")
-                        CardSelectView(legenda: "Trabalho", local: "Trinta Praça", icon: "icon_home")
-                    }
-                    .padding(.leading, 5)
-                    .padding(.trailing, 20)
-                }
-                .padding(.leading, 15)
-                .padding(.bottom, 20)
-                
-                Button(action: {
-                    do{
-                        try Auth.auth().signOut()
-                        withAnimation{status = false}
-                    }
-                    catch{
-                        print("Fail: \(error)")
-                    }
-                }, label: {
-                    ButtonView(text: "Confirmar")
-                })
+            if mapModel.hasStartPoint {
+                HomeDestinationPointView(mapModel: mapModel)
             }
-            .frame(maxWidth: .infinity, minHeight: 300)
-            .background(Color("FundoColor"))
+            else {
+                HomeStartPointUIView(mapModel: mapModel)
+            }
+            
         }
         .ignoresSafeArea()
         .safeAreaInset(edge: .top, alignment: .leading){

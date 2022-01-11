@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "pinCenter.png",
+      "filename" : "pin_end.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "pinCenter@2x.png",
+      "filename" : "pin_end@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "pinCenter@3x.png",
+      "filename" : "pin_end@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -9,16 +9,18 @@ import SwiftUI
 
 struct SearchStatusView: View {
     var text: String?
+    var placeHolder = "Qual o ponto de partida?"
+    var isStartPoint = true
     
     var body: some View {
         HStack{
             HStack(spacing: 12){
                 Circle()
                     .frame(width: 9, height: 9)
-                    .foregroundColor(Color.accentColor)
+                    .foregroundColor(isStartPoint ? Color.accentColor : Color("EndPoint"))
                     .padding(.leading)
                 
-                Text(text ?? "Qual o ponto de partida?")
+                Text(text ?? placeHolder)
                     .font(Font.custom("Poppins-Regular", size: 17))
                     .foregroundColor(Color("TextoColor"))
                 
