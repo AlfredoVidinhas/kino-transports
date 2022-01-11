@@ -16,14 +16,16 @@ struct MainView: View {
     
     var body: some View {
         GeometryReader{ geometry in
-            ZStack{
-                HomeView(showMenu: self.$show)
+            NavigationView {
+                ZStack{
+                    HomeView(showMenu: self.$show).navigationBarHidden(true)
+                }
+                .frame(width: geometry.size.width, height: geometry.size.height)
+                .background(Color.white)
+                .disabled(self.show ? true : false)
+                .blur(radius: self.show ? 5 : 0)
+                .offset(x: self.show ? geometry.size.width / 1.3 : 0, y: 0)
             }
-            .frame(width: geometry.size.width, height: geometry.size.height)
-            .background(Color.white)
-            .disabled(self.show ? true : false)
-            .blur(radius: self.show ? 5 : 0)
-            .offset(x: self.show ? geometry.size.width / 1.3 : 0, y: 0)
             
             if self.show{
                 MenuView(showMenu: self.$show, userInfo: self.$userData.userInfo)
