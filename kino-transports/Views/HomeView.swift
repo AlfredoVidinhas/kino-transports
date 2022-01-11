@@ -19,24 +19,14 @@ struct HomeView: View {
     @State private var region = MKCoordinateRegion.defaultRegion
     @State private var cancellable: AnyCancellable?
     
-    @State var centerCoordinate = CLLocation()
-    @State var currentLocation: CLLocationCoordinate2D?
-    @State var annotation: MKPointAnnotation?
-    @State var streetName: String = ""
+    @StateObject var mapModel = MapViewModel()
     
     var body: some View {
         VStack{
             ZStack (alignment: .bottom){
-                /*Map(coordinateRegion: $region, interactionModes: .all, showsUserLocation: true, userTrackingMode: nil)
-                    .onChange(of: region.center.latitude) { newRegion in
-                        // the region changed to newRegion
-                        print("lat: \(region.center.latitude)")
-                    }*/
-                
                 ZStack{
-                    MapView(centerCoordinate: $centerCoordinate, currentLocation: $currentLocation, streetName: $streetName, withAnnotation: annotation)
-                    
-                    Image("icon_pin_center").offset(y: -20)
+                    MapView(mapModel: mapModel)
+                    Image("icon_pin_center").offset(y: -10)
                 }
                 
                 HStack{
@@ -62,7 +52,7 @@ struct HomeView: View {
             }
             
             VStack{
-                SearchStatusView(text: streetName)
+                SearchStatusView(text: mapModel.streetName)
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 28){
@@ -116,9 +106,9 @@ struct HomeView: View {
     
     private func setCurrentLocation() {
         cancellable = locationManager.$location.sink { location in
-            //region = MKCoordinateRegion(center: location?.coordinate ?? CLLocationCoordinate2D(), latitudinalMeters: 500, longitudinalMeters: 500)
-            currentLocation = nil
-            currentLocation = location?.coordinate ?? CLLocationCoordinate2D()
+            mapModel.isDragMap = false
+            mapModel.currentLocation = nil
+            mapModel.currentLocation = location?.coordinate ?? CLLocationCoordinate2D()
         }
     }
 }

@@ -10,12 +10,10 @@ import MapKit
 
 struct MapView: UIViewRepresentable {
     
-    @Binding var centerCoordinate: CLLocation
-    @Binding var currentLocation: CLLocationCoordinate2D?
-    @Binding var streetName: String
-    var withAnnotation: MKPointAnnotation?
     let regionInMeters: Double = 10000
     var previousLocation: CLLocation?
+    
+    @StateObject var mapModel = MapViewModel()
     
     class Coordinator: NSObject, MKMapViewDelegate {
         var parent: MapView
@@ -60,8 +58,8 @@ struct MapView: UIViewRepresentable {
                 let streetCity = placemark.name ?? ""
                 
                 DispatchQueue.main.async {
-                    mapView.showsUserLocation = false
-                    self!.parent.streetName = "\(streetName)"
+                    self!.parent.mapModel.isDragMap = true
+                    self!.parent.mapModel.streetName = "\(streetName)"
                     print("\(streetCity) \(streetName)")
                 }
             }
@@ -82,24 +80,22 @@ struct MapView: UIViewRepresentable {
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
         mapView.delegate = context.coordinator
-        mapView.showsUserLocation = true
+        mapView.showsUserLocation = false
         return mapView
     }
     
     func updateUIView(_ uiView: MKMapView, context: Context) {
-        if let currentLocation = self.currentLocation {
-            if let annotation = self.withAnnotation {
+        if let currentLocation = self.mapModel.currentLocation {
+            if let annotation = self.mapModel.annotation {
                 uiView.removeAnnotation(annotation)
             }
-            if uiView.showsUserLocation {
+            if self.mapModel.isDragMap == false {
+                uiView.showsUserLocation = true
                 let region = MKCoordinateRegion(center: currentLocation, latitudinalMeters: 500, longitudinalMeters: 500)
                 print("location1: \(currentLocation)????")
                 uiView.setRegion(region, animated: true)
             }
-            else{
-                uiView.showsUserLocation = true
-            }
-        } else if let annotation = self.withAnnotation {
+        } else if let annotation = self.mapModel.annotation {
             uiView.removeAnnotations(uiView.annotations)
             uiView.addAnnotation(annotation)
         }
