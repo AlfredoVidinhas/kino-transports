@@ -25,6 +25,11 @@ struct HomeDestinationPointView: View {
             .padding(.leading, 15)
             .padding(.bottom, 20)
             
+            NavigationLink(destination: CarTypeView().navigationBarHidden(true), isActive: $mapModel.hasDestinationPoint) {
+                Text("")
+                    .hidden()
+            }
+            
             Button(action: {
                 /*do{
                     try Auth.auth().signOut()

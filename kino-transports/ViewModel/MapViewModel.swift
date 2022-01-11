@@ -14,8 +14,9 @@ class MapViewModel: ObservableObject{
     @Published var currentLocation: CLLocationCoordinate2D?
     @Published var annotations = [MKPointAnnotation]()
     @Published var streetName: String = ""
-    @Published var isDragMap: Bool = false
-    @Published var hasStartPoint: Bool = false
+    @Published var isDragMap = false
+    @Published var hasStartPoint = false
+    @Published var hasDestinationPoint = false
     @Published var uiMap: MKMapView?
     
     init() {
@@ -38,7 +39,7 @@ class MapViewModel: ObservableObject{
     
     func defineDestinationPoint() {
         createAnnotation(subtitle: "Ponto de Destino")
-        //hasStartPoint = true
+        hasDestinationPoint = true
     }
     
     func removeAllPoints() {

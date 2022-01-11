@@ -32,6 +32,7 @@
 		AAD74179278C647C008E5D4D /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD74178278C647C008E5D4D /* MapViewModel.swift */; };
 		AAD7417B278D731D008E5D4D /* HomeStartPointUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7417A278D731D008E5D4D /* HomeStartPointUIView.swift */; };
 		AAD7417D278DABE7008E5D4D /* HomeDestinationPointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7417C278DABE7008E5D4D /* HomeDestinationPointView.swift */; };
+		AAD7417F278DC608008E5D4D /* CarTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7417E278DC607008E5D4D /* CarTypeView.swift */; };
 		AAE1E2A82770BC540008021F /* EmailPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E2A72770BC540008021F /* EmailPhoneView.swift */; };
 		AAE1E2AA2770BD140008021F /* NumberPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E2A92770BD140008021F /* NumberPhoneView.swift */; };
 		AAE1E2AD2770BD930008021F /* ExDividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E2AC2770BD930008021F /* ExDividerView.swift */; };
@@ -95,6 +96,7 @@
 		AAD74178278C647C008E5D4D /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		AAD7417A278D731D008E5D4D /* HomeStartPointUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStartPointUIView.swift; sourceTree = "<group>"; };
 		AAD7417C278DABE7008E5D4D /* HomeDestinationPointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDestinationPointView.swift; sourceTree = "<group>"; };
+		AAD7417E278DC607008E5D4D /* CarTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTypeView.swift; sourceTree = "<group>"; };
 		AAE1E2A72770BC540008021F /* EmailPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPhoneView.swift; sourceTree = "<group>"; };
 		AAE1E2A92770BD140008021F /* NumberPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPhoneView.swift; sourceTree = "<group>"; };
 		AAE1E2AC2770BD930008021F /* ExDividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExDividerView.swift; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 				AAD3E2D8277B20F8003B644F /* MenuView.swift */,
 				AAD7417A278D731D008E5D4D /* HomeStartPointUIView.swift */,
 				AAD7417C278DABE7008E5D4D /* HomeDestinationPointView.swift */,
+				AAD7417E278DC607008E5D4D /* CarTypeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				AAD7417B278D731D008E5D4D /* HomeStartPointUIView.swift in Sources */,
 				AAE1E2AF2770BE260008021F /* ConfirmCodeView.swift in Sources */,
 				AAE1E2A82770BC540008021F /* EmailPhoneView.swift in Sources */,
+				AAD7417F278DC608008E5D4D /* CarTypeView.swift in Sources */,
 				AA626703277C529900BB60AD /* LocationManager.swift in Sources */,
 				AAE1E2AA2770BD140008021F /* NumberPhoneView.swift in Sources */,
 				AA626707277C742600BB60AD /* RegisterViewModel.swift in Sources */,
