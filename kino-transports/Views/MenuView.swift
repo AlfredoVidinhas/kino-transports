@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct MenuView: View {
     @Binding var showMenu: Bool
     @Binding var userInfo: UserModel
+    
+    @AppStorage("log_Status") var status = false
     
     var body: some View {
         ZStack{
@@ -54,10 +57,26 @@ struct MenuView: View {
                     ExDivider()
                         .padding()
                     
+                    VStack{
+                        
+                        Button(action: {
+                            do{
+                                try Auth.auth().signOut()
+                                withAnimation{status = false}
+                            }
+                            catch{
+                                print("Fail: \(error)")
+                            }
+                        }, label: {
+                            ButtonView(text: "Sair")
+                        })
+                    }
+                    
                 }
                 .padding(.top)
                 
                 Spacer()
+                
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
             .padding(.top, UIDevice.current.hasTopNotch ? 3 : 15)

@@ -23,9 +23,9 @@ struct HomeDestinationPointView: View {
                 .padding(.trailing, 20)
             }
             .padding(.leading, 15)
-            .padding(.bottom, 20)
+            .padding(.bottom, 28)
             
-            NavigationLink(destination: CarTypeView().navigationBarHidden(true), isActive: $mapModel.hasDestinationPoint) {
+            NavigationLink(destination: CarTypeView().navigationBarHidden(false), isActive: $mapModel.hasDestinationPoint) {
                 EmptyView()
             }
             
