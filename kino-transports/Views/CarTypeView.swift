@@ -9,8 +9,10 @@ import SwiftUI
 
 struct CarTypeView: View {
     var body: some View {
-        VStack{
-            
+        CustomNavigationContainerView {
+            VStack {
+                
+            }
         }
     }
 }
