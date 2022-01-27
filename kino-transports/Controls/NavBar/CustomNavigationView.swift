@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CustomNavigationView: View {
     @Environment(\.presentationMode) var presentationMode
-    @State private var tittle: String = "Titilo Header"
+    let title: String
     
     var body: some View {
         HStack{
@@ -23,7 +23,7 @@ struct CustomNavigationView: View {
 struct CustomNavigationView_Previews: PreviewProvider {
     static var previews: some View {
         VStack{
-            CustomNavigationView()
+            CustomNavigationView(title: "Titulo Header")
             Spacer()
         }
     }
@@ -52,7 +52,7 @@ extension CustomNavigationView {
     
     private var titleSection: some View {
         VStack {
-            Text(tittle)
+            Text(title)
                 .font(Font.custom("Poppins-Medium", size: 24))
                 .foregroundColor(Color("TextoColor"))
                 .padding(.leading, 20)

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CustomNavigationContainerView<Content: View>: View {
     let content: Content
+    @State private var title: String = "Titilo Header"
     
     init(@ViewBuilder content: () -> Content) {
         self.content = content()
@@ -16,10 +17,13 @@ struct CustomNavigationContainerView<Content: View>: View {
     
     var body: some View {
         VStack {
-            CustomNavigationView()
+            CustomNavigationView(title: title)
             Spacer()
             content
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
+        }
+        .onPreferenceChange(CustomNavBarTitlePreferenceKey.self) { value in
+            self.title = value
         }
     }
 }

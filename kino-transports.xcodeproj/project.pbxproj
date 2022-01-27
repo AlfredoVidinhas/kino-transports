@@ -30,6 +30,7 @@
 		AA7D30C227A2C93E00E14E59 /* CustomNavigationContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7D30C127A2C93E00E14E59 /* CustomNavigationContainerView.swift */; };
 		AA7D30C427A2D42400E14E59 /* CustomNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7D30C327A2D42400E14E59 /* CustomNavView.swift */; };
 		AA7D30C627A2D59C00E14E59 /* CustomNavLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7D30C527A2D59C00E14E59 /* CustomNavLink.swift */; };
+		AA7D30C827A2E8E500E14E59 /* CustomNavBarPreferencesKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7D30C727A2E8E500E14E59 /* CustomNavBarPreferencesKeys.swift */; };
 		AAA62DED2779C14B0039F371 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA62DEC2779C14B0039F371 /* MainView.swift */; };
 		AAD3E2D9277B20F8003B644F /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD3E2D8277B20F8003B644F /* MenuView.swift */; };
 		AAD3E2DC277B4C09003B644F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD3E2DB277B4C09003B644F /* Extension.swift */; };
@@ -98,6 +99,7 @@
 		AA7D30C127A2C93E00E14E59 /* CustomNavigationContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationContainerView.swift; sourceTree = "<group>"; };
 		AA7D30C327A2D42400E14E59 /* CustomNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavView.swift; sourceTree = "<group>"; };
 		AA7D30C527A2D59C00E14E59 /* CustomNavLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavLink.swift; sourceTree = "<group>"; };
+		AA7D30C727A2E8E500E14E59 /* CustomNavBarPreferencesKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarPreferencesKeys.swift; sourceTree = "<group>"; };
 		AAA62DEC2779C14B0039F371 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		AAD3E2D8277B20F8003B644F /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		AAD3E2DB277B4C09003B644F /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				AA7D30C327A2D42400E14E59 /* CustomNavView.swift */,
 				AA7D30C127A2C93E00E14E59 /* CustomNavigationContainerView.swift */,
 				AA7D30C527A2D59C00E14E59 /* CustomNavLink.swift */,
+				AA7D30C727A2E8E500E14E59 /* CustomNavBarPreferencesKeys.swift */,
 			);
 			path = NavBar;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				AAE1E2B22770C31D0008021F /* OTPTextFieldView.swift in Sources */,
 				841CE9462742340C003EEF0F /* kino_transportsApp.swift in Sources */,
 				AAA62DED2779C14B0039F371 /* MainView.swift in Sources */,
+				AA7D30C827A2E8E500E14E59 /* CustomNavBarPreferencesKeys.swift in Sources */,
 				AAE1E3152772187A0008021F /* ButtonView.swift in Sources */,
 				AAD74179278C647C008E5D4D /* MapViewModel.swift in Sources */,
 			);
