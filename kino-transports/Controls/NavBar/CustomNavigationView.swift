@@ -17,6 +17,8 @@ struct CustomNavigationView: View {
             titleSection
             Spacer()
         }
+        .padding(.top, UIDevice.current.hasTopNotch ? 3 : 15)
+        .padding(.bottom, 25)
     }
 }
 

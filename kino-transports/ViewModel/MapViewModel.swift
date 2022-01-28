@@ -59,4 +59,16 @@ class MapViewModel: ObservableObject{
     func requestRoute(){
         
     }
+    
+    func getStartName() -> String {
+        return annotations.count > 0 ? annotations[0].title! : "Partida title"
+    }
+    
+    func getDestinationName() -> String {
+        return annotations.count > 0 ? annotations[1].title! : "Destino tittle"
+    }
+    
+    func calculatePrice(typeCar: Int) -> String {
+        return String(5000*typeCar) + " AKZ"
+    }
 }

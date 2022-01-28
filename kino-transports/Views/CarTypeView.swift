@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CarTypeView: View {
     @State var currentIndex = 2
+    @StateObject var mapModel = MapViewModel()
     
     var body: some View {
         CustomNavigationContainerView {
@@ -38,7 +39,7 @@ struct CarTypeView: View {
                                     .foregroundColor(Color("TextoColor").opacity(0.6))
                                     .padding(.bottom, 1)
                                 
-                                Text("Viana - Estalagem")
+                                Text(mapModel.getStartName())
                                     .font(Font.custom("Poppins-Medium", size: 15))
                                     .foregroundColor(Color("TextoColor"))
                                     .padding(.bottom, 10)
@@ -51,7 +52,7 @@ struct CarTypeView: View {
                                     .padding(.top, 10)
                                     .padding(.bottom, 1)
                                 
-                                Text("Praça do Trinta")
+                                Text(mapModel.getDestinationName())
                                     .font(Font.custom("Poppins-Medium", size: 15))
                                     .foregroundColor(Color("TextoColor"))
                             }
@@ -83,20 +84,19 @@ struct CarTypeView: View {
                             
                             HStack {
                                 Text("Preço: ")
-                                    .font(Font.custom("Poppins-Regular", size: 15))
+                                    .font(Font.custom("Poppins-Regular", size: 16))
                                     .foregroundColor(Color("TextoColor").opacity(0.6))
                                 
-                                Text("5.000 AKZ")
-                                    .font(Font.custom("Poppins-Medium", size: 15))
+                                Text(mapModel.calculatePrice(typeCar: currentIndex))
+                                    .font(Font.custom("Poppins-Medium", size: 16))
                                     .foregroundColor(Color("TextoColor"))
                             }
                             .padding(.top, 5)
                         }
                         .padding(.vertical, 17)
                         .padding(.horizontal, 21)
-                    }
+                    }.padding(.bottom, 20)
                 }
-                .padding(.top, 30)
                 
                 
                 Spacer()
@@ -145,7 +145,7 @@ struct CardSelectCarView: View {
                 Image(icon)
             }
             .frame(width: 75, height: 75)
-            .background(LinearGradient(gradient: Gradient(colors: [Color("SecondColor"), .accentColor]), startPoint: .top, endPoint: .bottom).opacity(currentIndex == index ? 1 : 0))
+            .background(LinearGradient(gradient: Gradient(colors: [Color("TerceiraColor"), .accentColor]), startPoint: .top, endPoint: .bottom).opacity(currentIndex == index ? 1 : 0))
             .border(Color("TextoColor").opacity(0.26), width: 1, cornerRadius: 13)
             
             Text(title)
