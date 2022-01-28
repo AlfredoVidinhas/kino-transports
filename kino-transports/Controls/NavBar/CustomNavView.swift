@@ -34,3 +34,10 @@ struct CustomNavView_Previews: PreviewProvider {
         }
     }
 }
+
+extension UINavigationController {
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+        interactivePopGestureRecognizer?.delegate = nil
+    }
+}

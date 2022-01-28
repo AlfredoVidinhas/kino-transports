@@ -31,6 +31,7 @@
 		AA7D30C427A2D42400E14E59 /* CustomNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7D30C327A2D42400E14E59 /* CustomNavView.swift */; };
 		AA7D30C627A2D59C00E14E59 /* CustomNavLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7D30C527A2D59C00E14E59 /* CustomNavLink.swift */; };
 		AA7D30C827A2E8E500E14E59 /* CustomNavBarPreferencesKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7D30C727A2E8E500E14E59 /* CustomNavBarPreferencesKeys.swift */; };
+		AA7D30CA27A3ECA100E14E59 /* VLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7D30C927A3ECA100E14E59 /* VLineView.swift */; };
 		AAA62DED2779C14B0039F371 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA62DEC2779C14B0039F371 /* MainView.swift */; };
 		AAD3E2D9277B20F8003B644F /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD3E2D8277B20F8003B644F /* MenuView.swift */; };
 		AAD3E2DC277B4C09003B644F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD3E2DB277B4C09003B644F /* Extension.swift */; };
@@ -100,6 +101,7 @@
 		AA7D30C327A2D42400E14E59 /* CustomNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavView.swift; sourceTree = "<group>"; };
 		AA7D30C527A2D59C00E14E59 /* CustomNavLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavLink.swift; sourceTree = "<group>"; };
 		AA7D30C727A2E8E500E14E59 /* CustomNavBarPreferencesKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarPreferencesKeys.swift; sourceTree = "<group>"; };
+		AA7D30C927A3ECA100E14E59 /* VLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VLineView.swift; sourceTree = "<group>"; };
 		AAA62DEC2779C14B0039F371 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		AAD3E2D8277B20F8003B644F /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		AAD3E2DB277B4C09003B644F /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 				AAF148AD27731E2700211A18 /* CardSelectView.swift */,
 				AAF148C02773815400211A18 /* LoadingView.swift */,
 				AA62670D277EE28500BB60AD /* MapView.swift */,
+				AA7D30C927A3ECA100E14E59 /* VLineView.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				AA7D30C827A2E8E500E14E59 /* CustomNavBarPreferencesKeys.swift in Sources */,
 				AAE1E3152772187A0008021F /* ButtonView.swift in Sources */,
 				AAD74179278C647C008E5D4D /* MapViewModel.swift in Sources */,
+				AA7D30CA27A3ECA100E14E59 /* VLineView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
