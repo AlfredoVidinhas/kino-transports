@@ -20,6 +20,7 @@
 		84845ACF2743019F00345E5D /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84845ACA2743019F00345E5D /* Poppins-Regular.ttf */; };
 		84845AD02743019F00345E5D /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84845ACB2743019F00345E5D /* Poppins-Bold.ttf */; };
 		84845AD12743019F00345E5D /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84845ACC2743019F00345E5D /* Poppins-SemiBold.ttf */; };
+		84DAC79027CE10D200313271 /* RequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAC78F27CE10D100313271 /* RequestViewModel.swift */; };
 		AA626703277C529900BB60AD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA626702277C529900BB60AD /* LocationManager.swift */; };
 		AA626705277C52DF00BB60AD /* MKCoordinateRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA626704277C52DF00BB60AD /* MKCoordinateRegion.swift */; };
 		AA626707277C742600BB60AD /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA626706277C742600BB60AD /* RegisterViewModel.swift */; };
@@ -90,6 +91,7 @@
 		84845ACA2743019F00345E5D /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		84845ACB2743019F00345E5D /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		84845ACC2743019F00345E5D /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		84DAC78F27CE10D100313271 /* RequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewModel.swift; sourceTree = "<group>"; };
 		AA626702277C529900BB60AD /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		AA626704277C52DF00BB60AD /* MKCoordinateRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegion.swift; sourceTree = "<group>"; };
 		AA626706277C742600BB60AD /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				AA626706277C742600BB60AD /* RegisterViewModel.swift */,
 				AA62670B277C8D7A00BB60AD /* UserViewModel.swift */,
 				AAD74178278C647C008E5D4D /* MapViewModel.swift */,
+				84DAC78F27CE10D100313271 /* RequestViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				AAE1E313277214690008021F /* NameRegistView.swift in Sources */,
 				AAF148AC2773152E00211A18 /* SearchStatusView.swift in Sources */,
 				AAD7417D278DABE7008E5D4D /* HomeDestinationPointView.swift in Sources */,
+				84DAC79027CE10D200313271 /* RequestViewModel.swift in Sources */,
 				AA626705277C52DF00BB60AD /* MKCoordinateRegion.swift in Sources */,
 				AAE1E2AD2770BD930008021F /* ExDividerView.swift in Sources */,
 				AAE1E3172772283A0008021F /* HomeView.swift in Sources */,

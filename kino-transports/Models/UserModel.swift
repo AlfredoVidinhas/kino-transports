@@ -10,6 +10,7 @@ import SwiftUI
 struct UserModel{
     var userName: String
     var email: String
+    var phoneNumber: String
     var isDriver: Bool
     var dateCreated: Date
 }

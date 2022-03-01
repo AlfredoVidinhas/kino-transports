@@ -8,6 +8,7 @@
 import SwiftUI
 import CoreLocation
 import MapKit
+import Firebase
 
 class MapViewModel: ObservableObject{
     @Published var centerCoordinate = CLLocation()
@@ -68,7 +69,11 @@ class MapViewModel: ObservableObject{
         return annotations.count > 0 ? annotations[1].title! : "Destino tittle"
     }
     
-    func calculatePrice(typeCar: Int) -> String {
-        return String(5000*typeCar) + " AKZ"
+    func getStarGeoPoint() -> GeoPoint {
+        return GeoPoint(latitude: annotations[0].coordinate.latitude, longitude: annotations[0].coordinate.longitude)
+    }
+    
+    func getDestinationGeoPoint() -> GeoPoint {
+        return GeoPoint(latitude: annotations[1].coordinate.latitude, longitude: annotations[1].coordinate.longitude)
     }
 }

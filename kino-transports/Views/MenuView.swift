@@ -49,7 +49,7 @@ struct MenuView: View {
                         .foregroundColor(Color("TextoColor"))
                         .padding(.top, 13)
                     
-                    Text(verbatim: self.userInfo.email)
+                    Text(verbatim: self.userInfo.phoneNumber)
                         .font(Font.custom("Poppins-Regular", size: 14))
                         .foregroundColor(Color("TextoColor").opacity(0.6))
                         .padding(.top, -12)
@@ -87,6 +87,6 @@ struct MenuView: View {
 
 struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuView(showMenu: .constant(false), userInfo: .constant(UserModel(userName: "Alfredo Vidinhas", email: "alfredo@gmail.com", isDriver: false, dateCreated: Date())))
+        MenuView(showMenu: .constant(false), userInfo: .constant(UserModel(userName: "Alfredo Vidinhas", email: "alfredo@gmail.com", phoneNumber: "", isDriver: false, dateCreated: Date())))
     }
 }
