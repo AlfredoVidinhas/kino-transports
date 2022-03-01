@@ -18,7 +18,12 @@ struct MainView: View {
         GeometryReader{ geometry in
             NavigationView {
                 ZStack{
-                    HomeView(showMenu: self.$show).navigationBarHidden(true)
+                    if userData.userInfo.isDriver {
+                        HomeDriverView(showMenu: self.$show).navigationBarHidden(true)
+                    }
+                    else {
+                        HomeView(showMenu: self.$show).navigationBarHidden(true)
+                    }
                 }
                 .frame(width: geometry.size.width, height: geometry.size.height)
                 .background(Color.white)

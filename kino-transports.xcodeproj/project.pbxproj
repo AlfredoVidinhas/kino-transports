@@ -21,6 +21,9 @@
 		84845AD02743019F00345E5D /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84845ACB2743019F00345E5D /* Poppins-Bold.ttf */; };
 		84845AD12743019F00345E5D /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84845ACC2743019F00345E5D /* Poppins-SemiBold.ttf */; };
 		84DAC79027CE10D200313271 /* RequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAC78F27CE10D100313271 /* RequestViewModel.swift */; };
+		84DAC79427CE95BD00313271 /* HomeDriverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAC79327CE95BD00313271 /* HomeDriverView.swift */; };
+		84DAC79627CE9DFE00313271 /* RequestModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAC79527CE9DFE00313271 /* RequestModalView.swift */; };
+		84DAC79827CEA27500313271 /* DriverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DAC79727CEA27500313271 /* DriverViewModel.swift */; };
 		AA626703277C529900BB60AD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA626702277C529900BB60AD /* LocationManager.swift */; };
 		AA626705277C52DF00BB60AD /* MKCoordinateRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA626704277C52DF00BB60AD /* MKCoordinateRegion.swift */; };
 		AA626707277C742600BB60AD /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA626706277C742600BB60AD /* RegisterViewModel.swift */; };
@@ -92,6 +95,9 @@
 		84845ACB2743019F00345E5D /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		84845ACC2743019F00345E5D /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		84DAC78F27CE10D100313271 /* RequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewModel.swift; sourceTree = "<group>"; };
+		84DAC79327CE95BD00313271 /* HomeDriverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDriverView.swift; sourceTree = "<group>"; };
+		84DAC79527CE9DFE00313271 /* RequestModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModalView.swift; sourceTree = "<group>"; };
+		84DAC79727CEA27500313271 /* DriverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverViewModel.swift; sourceTree = "<group>"; };
 		AA626702277C529900BB60AD /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		AA626704277C52DF00BB60AD /* MKCoordinateRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegion.swift; sourceTree = "<group>"; };
 		AA626706277C742600BB60AD /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -230,6 +236,22 @@
 			path = Poppins;
 			sourceTree = "<group>";
 		};
+		84DAC79127CE959400313271 /* Driver */ = {
+			isa = PBXGroup;
+			children = (
+				84DAC79327CE95BD00313271 /* HomeDriverView.swift */,
+				84DAC79527CE9DFE00313271 /* RequestModalView.swift */,
+			);
+			path = Driver;
+			sourceTree = "<group>";
+		};
+		84DAC79227CE959D00313271 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
 		AA626701277C523800BB60AD /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +316,8 @@
 		AAE1E3112772141A0008021F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				84DAC79227CE959D00313271 /* Client */,
+				84DAC79127CE959400313271 /* Driver */,
 				841CE9472742340C003EEF0F /* SplashView.swift */,
 				AAE1E2A72770BC540008021F /* EmailPhoneView.swift */,
 				AAE1E2A92770BD140008021F /* NumberPhoneView.swift */,
@@ -317,6 +341,7 @@
 				AA62670B277C8D7A00BB60AD /* UserViewModel.swift */,
 				AAD74178278C647C008E5D4D /* MapViewModel.swift */,
 				84DAC78F27CE10D100313271 /* RequestViewModel.swift */,
+				84DAC79727CEA27500313271 /* DriverViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -477,6 +502,7 @@
 				84DAC79027CE10D200313271 /* RequestViewModel.swift in Sources */,
 				AA626705277C52DF00BB60AD /* MKCoordinateRegion.swift in Sources */,
 				AAE1E2AD2770BD930008021F /* ExDividerView.swift in Sources */,
+				84DAC79427CE95BD00313271 /* HomeDriverView.swift in Sources */,
 				AAE1E3172772283A0008021F /* HomeView.swift in Sources */,
 				AAF148C12773815400211A18 /* LoadingView.swift in Sources */,
 				AA62670E277EE28600BB60AD /* MapView.swift in Sources */,
@@ -484,6 +510,7 @@
 				AAD7417B278D731D008E5D4D /* HomeStartPointUIView.swift in Sources */,
 				AAE1E2AF2770BE260008021F /* ConfirmCodeView.swift in Sources */,
 				AAE1E2A82770BC540008021F /* EmailPhoneView.swift in Sources */,
+				84DAC79827CEA27500313271 /* DriverViewModel.swift in Sources */,
 				AAD7417F278DC608008E5D4D /* CarTypeView.swift in Sources */,
 				AA7D30C427A2D42400E14E59 /* CustomNavView.swift in Sources */,
 				AA626703277C529900BB60AD /* LocationManager.swift in Sources */,
@@ -499,6 +526,7 @@
 				AA7D30C827A2E8E500E14E59 /* CustomNavBarPreferencesKeys.swift in Sources */,
 				AAE1E3152772187A0008021F /* ButtonView.swift in Sources */,
 				AAD74179278C647C008E5D4D /* MapViewModel.swift in Sources */,
+				84DAC79627CE9DFE00313271 /* RequestModalView.swift in Sources */,
 				AA7D30CA27A3ECA100E14E59 /* VLineView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
