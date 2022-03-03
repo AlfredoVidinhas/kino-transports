@@ -14,6 +14,7 @@ class RequestViewModel: ObservableObject {
     @Published var from: GeoPoint?
     @Published var to: GeoPoint?
     @Published var loading = false
+    @Published var requestAccept = false
     @Published var docId = ""
     
     let ref = Firestore.firestore()
@@ -26,7 +27,7 @@ class RequestViewModel: ObservableObject {
         return String(5000*carIndex) + " AKZ"
     }
     
-    func requestCar(from: GeoPoint, to: GeoPoint) {
+    func requestCar(from: GeoPoint, to: GeoPoint, fromTitle: String, toTitle: String) {
         loading = true
         
         let doc = self.ref.collection("Corridas").document()
@@ -40,15 +41,32 @@ class RequestViewModel: ObservableObject {
             "to": to,
             "cliente": self.uid,
             "active": true,
-            "tipo_carro": self.carIndex,
+            "tipoCarro": self.carIndex,
             "motorista": "",
-            "preco": self.calculatePrice()
+            "preco": self.calculatePrice(),
+            "fromTitle": fromTitle,
+            "toTitle": toTitle
         ]){ (err) in
             if err != nil{
                 self.loading = false
                 return
             }
             //self.loading = false
+            
+            self.ref.collection("Corridas").whereField("motorista", isNotEqualTo: "").addSnapshotListener {(snap, err) in
+                if err != nil {
+                    self.loading = false
+                    print((err?.localizedDescription)!)
+                    return
+                }
+                
+                let requests = snap?.documents
+                
+                if(requests!.count > 0){
+                    let data = requests![0].data()
+                    self.requestAccept = true
+                }
+            }
         }
     }
     

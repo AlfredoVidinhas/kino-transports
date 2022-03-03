@@ -105,13 +105,18 @@ struct CarTypeView: View {
                     Button(action: {
                         let impactMed = UIImpactFeedbackGenerator(style: .medium)
                         impactMed.impactOccurred()
-                        requestModel.requestCar(from: self.mapModel.getStarGeoPoint(), to: self.mapModel.getDestinationGeoPoint())
+                        requestModel.requestCar(from: self.mapModel.getStarGeoPoint(), to: self.mapModel.getDestinationGeoPoint(), fromTitle: self.mapModel.getStartName(), toTitle: self.mapModel.getDestinationName())
                     }, label: {
                         ButtonView(text: "Pedir Kino")
                     })
                 }
                 .customNavigationTitle("Tipo de carro")
             }
+            
+            NavigationLink(destination: RequestClientView(requestModel: requestModel).navigationBarHidden(true), isActive: $requestModel.requestAccept) {
+                EmptyView()
+            }
+            
             if requestModel.loading {
                 ResquestLoader(buttonCancel: {requestModel.cancelRequest()})
             }

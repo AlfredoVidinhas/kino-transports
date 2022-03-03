@@ -1,33 +1,32 @@
 //
-//  HomeDriverView.swift
+//  RequestClientView.swift
 //  kino-transports
 //
-//  Created by Alfredo Vidinhas on 01/03/2022.
+//  Created by Alfredo Vidinhas on 03/03/22.
 //
 
 import SwiftUI
 import CoreLocation
 import MapKit
+import Firebase
 import Combine
 
-struct HomeDriverView: View {
-    @Binding var showMenu: Bool
+struct RequestClientView: View {
     @ObservedObject private var locationManager = LocationManager()
     @State private var region = MKCoordinateRegion.defaultRegion
     @State private var cancellable: AnyCancellable?
     
     @StateObject var mapModel = MapViewModel()
-    @StateObject var driverModel = DriverViewModel()
+    @StateObject var requestModel = RequestViewModel()
     
     var body: some View {
         VStack{
-            ZStack (alignment: .bottom){
+            ZStack(alignment: .bottom){
                 ZStack{
                     MapView(mapModel: mapModel)
-                    Image("icon_pin_init").offset(y: -27)
                 }
                 
-                HStack {
+                HStack{
                     Spacer()
                     
                     Button(action: {
@@ -48,29 +47,12 @@ struct HomeDriverView: View {
                 .padding(.horizontal, 20)
                 .padding(.bottom, 30)
                 
-                if driverModel.hasRequest {
-                    RequestModalView(buttonAccept: {driverModel.acceptRequest()}, pontoPartida: driverModel.request.fromTitle ?? "", pontoDestino: driverModel.request.toTitle ?? "")
-                }
+                
             }
+            
+            RequestInformationView()
         }
         .ignoresSafeArea()
-        .safeAreaInset(edge: .top, alignment: .leading){
-            Button(action: {
-                withAnimation{
-                    let impactMed = UIImpactFeedbackGenerator(style: .medium)
-                    impactMed.impactOccurred()
-                    self.showMenu = true
-                }
-            }, label: {
-                Image("icon_menu")
-                    .frame(width: 40, height: 40)
-                    .background(Color.accentColor)
-                    .clipShape(Circle())
-                    .background(Circle())
-                    .shadow(color: Color("Shadow"), radius: 15, x: 0, y: 10)
-                    .padding(.leading, 20)
-            }).padding(.top, UIDevice.current.hasTopNotch ? 3 : 15)
-        }
         .onAppear{
             setCurrentLocation()
         }
@@ -85,8 +67,8 @@ struct HomeDriverView: View {
     }
 }
 
-struct HomeDriverView_Previews: PreviewProvider {
+struct RequestClientView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeDriverView(showMenu: .constant(false))
+        RequestClientView()
     }
 }

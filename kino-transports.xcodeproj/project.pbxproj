@@ -43,6 +43,9 @@
 		AAD7417B278D731D008E5D4D /* HomeStartPointUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7417A278D731D008E5D4D /* HomeStartPointUIView.swift */; };
 		AAD7417D278DABE7008E5D4D /* HomeDestinationPointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7417C278DABE7008E5D4D /* HomeDestinationPointView.swift */; };
 		AAD7417F278DC608008E5D4D /* CarTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7417E278DC607008E5D4D /* CarTypeView.swift */; };
+		AADF1D2927D0BDF0004FCCB1 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADF1D2827D0BDF0004FCCB1 /* RequestModel.swift */; };
+		AADF1D2B27D0F9E4004FCCB1 /* RequestClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADF1D2A27D0F9E4004FCCB1 /* RequestClientView.swift */; };
+		AADF1D2D27D0FFBD004FCCB1 /* RequestInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADF1D2C27D0FFBD004FCCB1 /* RequestInformationView.swift */; };
 		AAE1E2A82770BC540008021F /* EmailPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E2A72770BC540008021F /* EmailPhoneView.swift */; };
 		AAE1E2AA2770BD140008021F /* NumberPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E2A92770BD140008021F /* NumberPhoneView.swift */; };
 		AAE1E2AD2770BD930008021F /* ExDividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1E2AC2770BD930008021F /* ExDividerView.swift */; };
@@ -117,6 +120,9 @@
 		AAD7417A278D731D008E5D4D /* HomeStartPointUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStartPointUIView.swift; sourceTree = "<group>"; };
 		AAD7417C278DABE7008E5D4D /* HomeDestinationPointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDestinationPointView.swift; sourceTree = "<group>"; };
 		AAD7417E278DC607008E5D4D /* CarTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTypeView.swift; sourceTree = "<group>"; };
+		AADF1D2827D0BDF0004FCCB1 /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
+		AADF1D2A27D0F9E4004FCCB1 /* RequestClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RequestClientView.swift; path = "kino-transports/Models/RequestClientView.swift"; sourceTree = SOURCE_ROOT; };
+		AADF1D2C27D0FFBD004FCCB1 /* RequestInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestInformationView.swift; sourceTree = "<group>"; };
 		AAE1E2A72770BC540008021F /* EmailPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPhoneView.swift; sourceTree = "<group>"; };
 		AAE1E2A92770BD140008021F /* NumberPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPhoneView.swift; sourceTree = "<group>"; };
 		AAE1E2AC2770BD930008021F /* ExDividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExDividerView.swift; sourceTree = "<group>"; };
@@ -248,6 +254,11 @@
 		84DAC79227CE959D00313271 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				AAE1E3162772283A0008021F /* HomeView.swift */,
+				AAD7417A278D731D008E5D4D /* HomeStartPointUIView.swift */,
+				AAD7417C278DABE7008E5D4D /* HomeDestinationPointView.swift */,
+				AADF1D2A27D0F9E4004FCCB1 /* RequestClientView.swift */,
+				AADF1D2C27D0FFBD004FCCB1 /* RequestInformationView.swift */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -264,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				AA626709277C8CBF00BB60AD /* UserModel.swift */,
+				AADF1D2827D0BDF0004FCCB1 /* RequestModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -323,11 +335,8 @@
 				AAE1E2A92770BD140008021F /* NumberPhoneView.swift */,
 				AAE1E2AE2770BE250008021F /* ConfirmCodeView.swift */,
 				AAE1E312277214690008021F /* NameRegistView.swift */,
-				AAE1E3162772283A0008021F /* HomeView.swift */,
 				AAA62DEC2779C14B0039F371 /* MainView.swift */,
 				AAD3E2D8277B20F8003B644F /* MenuView.swift */,
-				AAD7417A278D731D008E5D4D /* HomeStartPointUIView.swift */,
-				AAD7417C278DABE7008E5D4D /* HomeDestinationPointView.swift */,
 				AAD7417E278DC607008E5D4D /* CarTypeView.swift */,
 			);
 			path = Views;
@@ -514,7 +523,9 @@
 				AAD7417F278DC608008E5D4D /* CarTypeView.swift in Sources */,
 				AA7D30C427A2D42400E14E59 /* CustomNavView.swift in Sources */,
 				AA626703277C529900BB60AD /* LocationManager.swift in Sources */,
+				AADF1D2927D0BDF0004FCCB1 /* RequestModel.swift in Sources */,
 				AAE1E2AA2770BD140008021F /* NumberPhoneView.swift in Sources */,
+				AADF1D2D27D0FFBD004FCCB1 /* RequestInformationView.swift in Sources */,
 				AA626707277C742600BB60AD /* RegisterViewModel.swift in Sources */,
 				AAD3E2D9277B20F8003B644F /* MenuView.swift in Sources */,
 				AAD3E2DC277B4C09003B644F /* Extension.swift in Sources */,
@@ -523,6 +534,7 @@
 				AAE1E2B22770C31D0008021F /* OTPTextFieldView.swift in Sources */,
 				841CE9462742340C003EEF0F /* kino_transportsApp.swift in Sources */,
 				AAA62DED2779C14B0039F371 /* MainView.swift in Sources */,
+				AADF1D2B27D0F9E4004FCCB1 /* RequestClientView.swift in Sources */,
 				AA7D30C827A2E8E500E14E59 /* CustomNavBarPreferencesKeys.swift in Sources */,
 				AAE1E3152772187A0008021F /* ButtonView.swift in Sources */,
 				AAD74179278C647C008E5D4D /* MapViewModel.swift in Sources */,
